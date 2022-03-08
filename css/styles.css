@@ -1,13 +1,18 @@
 body {
   font-family: "Raleway", sans-serif;
-  background-color: ##ffffff;
-  color: #757575;
+  background-color: #ffffff;
+  color: #212121;
 }
 
-/* 
-  цвет веб студио #2196F3
-  цвет #212121
-  цвет телефона #757575
-  цвет слогана #FFFFFF
-  rgba(255, 255, 255, 0.6)
-  */
+.list {
+  list-style: none;
+}
+
+.button-main {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.link-current {
+  color: #2196f3;
+}
