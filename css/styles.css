@@ -2,11 +2,19 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: #212121;
+  font-weight: 400;
 }
 
-/* ----- header ----- */
+/* changeable rules */
+:root {
+  --color-text: #757575;
+  --color-logo: #2196f3;
+}
+
+/* ----- header all ----- */
+
 /* logo */
-.logo {
+.logo-top {
   position: absolute;
   width: 145px;
   height: 31px;
@@ -18,9 +26,8 @@ body {
   font-size: 26px;
   line-height: 1.19;
 
-  /* identical to box height */
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--color-logo);
 }
 .logo-studio {
   color: #000000;
@@ -86,7 +93,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--color-text);
 }
 
 /* tel */
@@ -102,10 +109,30 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #757575;
+  color: var(--color-text);
 }
 
 /* ----- main studio ----- */
+
+.studio-hero {
+  position: absolute;
+  width: 696px;
+  height: 120px;
+  left: 452px;
+  top: 280px;
+
+  background-color: #2f303a;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
 
 .button-main {
   color: #ffffff;
@@ -118,13 +145,377 @@ body {
   top: 440px;
 
   font-weight: 700;
-  font-size: 100%;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
+  font-size: 16px;
+  line-height: 1.88;
   letter-spacing: 0.06em;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+/* наши преимущества studio */
+
+.benefit-header {
+  position: absolute;
+  left: 612px;
+  top: 669px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: red;
+}
+
+.benefit-one-slogan {
+  position: absolute;
+  width: 270px;
+  height: 16px;
+  left: 215px;
+  top: 774px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefit-one-text {
+  position: absolute;
+  width: 270px;
+  height: 75px;
+  left: 215px;
+  top: 800px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+.benefit-two-slogan {
+  position: absolute;
+  width: 270px;
+  height: 16px;
+  left: 515px;
+  top: 774px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefit-two-text {
+  position: absolute;
+  width: 270px;
+  height: 75px;
+  left: 515px;
+  top: 800px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+.benefit-three-slogan {
+  position: absolute;
+  width: 270px;
+  height: 16px;
+  left: 815px;
+  top: 774px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefit-three-text {
+  position: absolute;
+  width: 270px;
+  height: 75px;
+  left: 815px;
+  top: 800px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+.benefit-four-slogan {
+  position: absolute;
+  width: 270px;
+  height: 16px;
+  left: 1115px;
+  top: 774px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefit-four-text {
+  position: absolute;
+  width: 270px;
+  height: 75px;
+  left: 1115px;
+  top: 800px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+/* про нас studio */
+
+.about-us-header {
+  position: absolute;
+  left: 612px;
+  top: 969px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.about-us-one {
+  position: absolute;
+  left: 215px;
+  top: 1061px;
+}
+
+.about-us-two {
+  position: absolute;
+  left: 615px;
+  top: 1061px;
+}
+
+.about-us-three {
+  position: absolute;
+  left: 1015px;
+  top: 1061px;
+}
+
+/* наша команда studio */
+
+.team-header {
+  position: absolute;
+  left: 668px;
+  top: 1543px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* учасник 1 */
+.team-one-foto {
+  position: absolute;
+  left: 215px;
+  top: 1635px;
+}
+
+.team-one-name {
+  position: absolute;
+  left: 275px;
+  top: 1925px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-one-role {
+  position: absolute;
+  width: 130px;
+  height: 19px;
+  left: 285px;
+  top: 1954px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+/* учасник 2 */
+.team-two-foto {
+  position: absolute;
+  left: 515px;
+  top: 1635px;
+}
+
+.team-two-name {
+  position: absolute;
+  left: 596px;
+  top: 1925px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-two-role {
+  position: absolute;
+  width: 147px;
+  height: 19px;
+  left: 577px;
+  top: 1954px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+/* учасник 3 */
+.team-three-foto {
+  position: absolute;
+  left: 815px;
+  top: 1635px;
+}
+
+.team-three-name {
+  position: absolute;
+  left: 882px;
+  top: 1925px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-three-role {
+  position: absolute;
+  width: 76px;
+  height: 19px;
+  left: 912px;
+  top: 1954px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+/* учасник 4 */
+.team-four-foto {
+  position: absolute;
+  left: 1115px;
+  top: 1635px;
+}
+
+.team-four-name {
+  position: absolute;
+  left: 1183px;
+  top: 1925px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-four-role {
+  position: absolute;
+  width: 87px;
+  height: 19px;
+  left: 1207px;
+  top: 1954px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+
+/* ----- footer ----- */
+
+.logo-bottom {
+  position: absolute;
+  width: 145px;
+  height: 31px;
+  left: 215px;
+  top: 2157px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+  color: var(--color-logo);
+}
+
+.adress-bottom {
+  position: absolute;
+  left: 215px;
+  top: 2208px;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+  background-color: #2f303a;
+}
+
+.mail-bottom {
+  position: absolute;
+  left: 215px;
+  top: 2238px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2f303a;
+}
+
+.tel-bottom {
+  position: absolute;
+  left: 215px;
+  top: 2268px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2f303a;
 }
