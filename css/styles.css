@@ -10,6 +10,10 @@ body {
   --color-text: #757575;
   --color-logo: #2196f3;
 }
+.selection:hover,
+.selection:focus {
+  color: #2196f3;
+}
 
 /* ----- header all ----- */
 
@@ -30,7 +34,7 @@ body {
   color: var(--color-logo);
 }
 .logo-studio {
-  color: #000000;
+  color: #212121;
 }
 
 /* link */
@@ -134,7 +138,7 @@ body {
   color: #ffffff;
 }
 
-.button-main {
+.button-main-index {
   color: #ffffff;
   background-color: #2196f3;
 
@@ -465,12 +469,6 @@ body {
 /* ----- footer ----- */
 
 .logo-bottom {
-  position: absolute;
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 2157px;
-
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -481,10 +479,6 @@ body {
 }
 
 .adress-bottom {
-  position: absolute;
-  left: 215px;
-  top: 2208px;
-
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -495,10 +489,6 @@ body {
 }
 
 .mail-bottom {
-  position: absolute;
-  left: 215px;
-  top: 2238px;
-
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -508,14 +498,56 @@ body {
 }
 
 .tel-bottom {
-  position: absolute;
-  left: 215px;
-  top: 2268px;
-
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
+}
+
+/* footer index position */
+.footer-index-logo {
+  position: absolute;
+  width: 145px;
+  height: 31px;
+  left: 215px;
+  top: 2157px;
+}
+.footer-index-adress {
+  position: absolute;
+  left: 215px;
+  top: 2208px;
+}
+.footer-index-mail {
+  position: absolute;
+  left: 215px;
+  top: 2238px;
+}
+.footer-index-tel {
+  position: absolute;
+  left: 215px;
+  top: 2268px;
+}
+
+/* footer portfolio position */
+.footer-portfolio-logo {
+  position: absolute;
+  left: 215px;
+  top: 1688px;
+}
+.footer-portfolio-adress {
+  position: absolute;
+  left: 215px;
+  top: 1739px;
+}
+.footer-portfolio-mail {
+  position: absolute;
+  left: 215px;
+  top: 1769px;
+}
+.footer-portfolio-tel {
+  position: absolute;
+  left: 215px;
+  top: 1799px;
 }
