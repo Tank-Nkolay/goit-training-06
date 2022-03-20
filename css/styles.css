@@ -9,10 +9,14 @@ body {
 :root {
   --color-text: #757575;
   --color-logo: #2196f3;
+  --color-button-portfolio: #f5f4fa;
 }
 .selection:hover,
 .selection:focus {
   color: #2196f3;
+}
+.cursor-view {
+  cursor: pointer;
 }
 
 /* ----- header all ----- */
@@ -550,4 +554,400 @@ body {
   position: absolute;
   left: 215px;
   top: 1799px;
+}
+
+/* ----- portfolio----- */
+
+/* техническое заглавие */
+.portfolio-hero {
+  position: absolute;
+  left: 734px;
+  top: 200px;
+  color: red;
+}
+
+/* кнопки выбора portfolio */
+.button-portfolio-all {
+  background: var(--color-button-portfolio);
+  position: absolute;
+  width: 73px;
+  height: 38px;
+  left: 495px;
+  top: 174px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+}
+
+.button-portfolio-site {
+  background: var(--color-button-portfolio);
+  position: absolute;
+  width: 128px;
+  height: 38px;
+  left: 576px;
+  top: 174px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+}
+
+.button-portfolio-app {
+  background: var(--color-button-portfolio);
+  position: absolute;
+  width: 145px;
+  height: 38px;
+  left: 712px;
+  top: 174px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+}
+
+.button-portfolio-design {
+  background: var(--color-button-portfolio);
+  position: absolute;
+  width: 103px;
+  height: 38px;
+  left: 865px;
+  top: 174px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+}
+
+.button-portfolio-marketing {
+  background: var(--color-button-portfolio);
+  position: absolute;
+  width: 130px;
+  height: 38px;
+  left: 976px;
+  top: 174px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+}
+
+/* примеры наших робот */
+
+/* пример один */
+.portfolio-foto-one {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 215px;
+  top: 262px;
+}
+.portfolio-header-one {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 239px;
+  top: 576px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-one {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 239px;
+  top: 616px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример два */
+.portfolio-foto-two {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 615px;
+  top: 262px;
+}
+.portfolio-header-two {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 639px;
+  top: 576px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-two {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 639px;
+  top: 616px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--color-text);
+}
+
+/* пример три */
+.portfolio-foto-three {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 1015px;
+  top: 262px;
+}
+.portfolio-header-three {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 1039px;
+  top: 576px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-three {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 1039px;
+  top: 616px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример четыре */
+.portfolio-foto-four {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 215px;
+  top: 696px;
+}
+.portfolio-header-four {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 239px;
+  top: 1010px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-four {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 239px;
+  top: 1050px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример пять */
+.portfolio-foto-five {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 615px;
+  top: 696px;
+}
+.portfolio-header-five {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 639px;
+  top: 1010px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-five {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 639px;
+  top: 1050px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример шесть */
+.portfolio-foto-six {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 1015px;
+  top: 696px;
+}
+.portfolio-header-six {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 1039px;
+  top: 1010px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-six {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 1039px;
+  top: 1050px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример семь */
+.portfolio-foto-seven {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 215px;
+  top: 1130px;
+}
+.portfolio-header-seven {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 239px;
+  top: 1444px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-seven {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 239px;
+  top: 1484px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример восемь */
+.portfolio-foto-eight {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 615px;
+  top: 1130px;
+}
+.portfolio-header-eight {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 639px;
+  top: 1444px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-eight {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 639px;
+  top: 1484px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* пример девять*/
+.portfolio-foto-nine {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 1015px;
+  top: 1130px;
+}
+.portfolio-header-nine {
+  position: absolute;
+  width: 322px;
+  height: 36px;
+  left: 1039px;
+  top: 1444px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-description-nine {
+  position: absolute;
+  width: 322px;
+  height: 30px;
+  left: 1039px;
+  top: 1484px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
 }
