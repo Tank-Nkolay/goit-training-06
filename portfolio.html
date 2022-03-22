@@ -4,21 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      li {
-        list-style-type: none;
-      }
-      ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      a {
-        text-decoration: none;
-      }
-      :any-link {
-        color: #212121;
-      }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,15 +26,19 @@
           <!-- link -->
           <ul>
             <li>
-              <a href="./index.html" class="list-studio selection">Студия</a>
+              <a href="./index.html" class="navigation-studio selection"
+                >Студия</a
+              >
             </li>
             <li>
-              <a href="./portfolio.html" class="list-portfolio link-current"
+              <a
+                href="./portfolio.html"
+                class="navigation-portfolio link-current"
                 >Портфолио</a
               >
             </li>
             <li>
-              <a href="./contacts.html" class="list-contacts selection"
+              <a href="./contacts.html" class="navigation-contacts selection"
                 >Контакты</a
               >
             </li>
@@ -73,163 +62,167 @@
     </header>
 
     <!-- main -->
+    <main>
+      <!--кнопки выбора работ-->
+      <section>
+        <h1 hidden class="portfolio-hero">Примеры наших робот</h1>
+        <ul>
+          <li>
+            <button type="button" class="button-portfolio-all cursor-view">
+              Все
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button-portfolio-site cursor-view">
+              Веб-сайты
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button-portfolio-app cursor-view">
+              Приложения
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button-portfolio-design cursor-view">
+              Дизайн
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="button-portfolio-marketing cursor-view"
+            >
+              Маркетинг
+            </button>
+          </li>
+        </ul>
 
-    <!--кнопки выбора работ-->
-    <section>
-      <h1 class="portfolio-hero">Примеры наших робот</h1>
-      <ul>
-        <li>
-          <button type="button" class="button-portfolio-all cursor-view">
-            Все
-          </button>
-        </li>
-        <li>
-          <button type="button" class="button-portfolio-site cursor-view">
-            Веб-сайты
-          </button>
-        </li>
-        <li>
-          <button type="button" class="button-portfolio-app cursor-view">
-            Приложения
-          </button>
-        </li>
-        <li>
-          <button type="button" class="button-portfolio-design cursor-view">
-            Дизайн
-          </button>
-        </li>
-        <li>
-          <button type="button" class="button-portfolio-marketing cursor-view">
-            Маркетинг
-          </button>
-        </li>
-      </ul>
-    </section>
-
-    <!--примеры наших работ-->
-    <section>
-      <ul>
-        <li>
-          <!--пример один-->
-          <img
-            class="portfolio-foto-one"
-            src="./images-portfolio/tehno-kryak.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-one">Технокряк</h2>
-          <p class="portfolio-description-one">Веб-сайт</p>
-        </li>
-        <li>
-          <!--пример два-->
-          <img
-            class="portfolio-foto-two"
-            src="./images-portfolio/poster-neworlean.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-two">Постер New Orlean vs Golden Star</h2>
-          <p class="portfolio-description-two">Дизайн</p>
-        </li>
-        <li>
-          <!--пример три-->
-          <img
-            class="portfolio-foto-three"
-            src="./images-portfolio/rest-seafood.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-three">Ресторан Seafood</h2>
-          <p class="portfolio-description-three">Приложение</p>
-        </li>
-        <li>
-          <!--пример четыре-->
-          <img
-            class="portfolio-foto-four"
-            src="./images-portfolio/project-prime.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-four">Проект Prime</h2>
-          <p class="portfolio-description-four">Маркетинг</p>
-        </li>
-        <li>
-          <!--пример пять-->
-          <img
-            class="portfolio-foto-five"
-            src="./images-portfolio/project-boxes.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-five">Проект Boxes</h2>
-          <p class="portfolio-description-five">Приложение</p>
-        </li>
-        <li>
-          <!--пример шесть-->
-          <img
-            class="portfolio-foto-six"
-            src="./images-portfolio/inspiration.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-six">Inspiration has no Borders</h2>
-          <p class="portfolio-description-six">Веб-сайт</p>
-        </li>
-        <li>
-          <!--пример семь-->
-          <img
-            class="portfolio-foto-seven"
-            src="./images-portfolio/limited-edition.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-seven">Издание Limited Edition</h2>
-          <p class="portfolio-description-seven">Дизайн</p>
-        </li>
-        <li>
-          <!--пример восемь-->
-          <img
-            class="portfolio-foto-eight"
-            src="./images-portfolio/project-lab.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-eight">Проект LAB</h2>
-          <p class="portfolio-description-eight">Маркетинг</p>
-        </li>
-        <li>
-          <!--пример девять-->
-          <img
-            class="portfolio-foto-nine"
-            src="./images-portfolio/growing-business.jpg"
-            alt="примеры наших работ"
-          />
-          <h2 class="portfolio-header-nine">Growing Business</h2>
-          <p class="portfolio-description-nine">Приложение</p>
-        </li>
-      </ul>
-    </section>
+        <!--примеры наших работ-->
+        <ul>
+          <li>
+            <!--пример один-->
+            <img
+              src="./images-portfolio/tehno-kryak.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-one">Технокряк</h2>
+            <p class="portfolio-description-one">Веб-сайт</p>
+          </li>
+          <li>
+            <!--пример два-->
+            <img
+              src="./images-portfolio/poster-neworlean.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-two">
+              Постер New Orlean vs Golden Star
+            </h2>
+            <p class="portfolio-description-two">Дизайн</p>
+          </li>
+          <li>
+            <!--пример три-->
+            <img
+              src="./images-portfolio/rest-seafood.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-three">Ресторан Seafood</h2>
+            <p class="portfolio-description-three">Приложение</p>
+          </li>
+          <li>
+            <!--пример четыре-->
+            <img
+              src="./images-portfolio/project-prime.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-four">Проект Prime</h2>
+            <p class="portfolio-description-four">Маркетинг</p>
+          </li>
+          <li>
+            <!--пример пять-->
+            <img
+              src="./images-portfolio/project-boxes.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-five">Проект Boxes</h2>
+            <p class="portfolio-description-five">Приложение</p>
+          </li>
+          <li>
+            <!--пример шесть-->
+            <img
+              src="./images-portfolio/inspiration.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-six">Inspiration has no Borders</h2>
+            <p class="portfolio-description-six">Веб-сайт</p>
+          </li>
+          <li>
+            <!--пример семь-->
+            <img
+              src="./images-portfolio/limited-edition.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-seven">Издание Limited Edition</h2>
+            <p class="portfolio-description-seven">Дизайн</p>
+          </li>
+          <li>
+            <!--пример восемь-->
+            <img
+              src="./images-portfolio/project-lab.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-eight">Проект LAB</h2>
+            <p class="portfolio-description-eight">Маркетинг</p>
+          </li>
+          <li>
+            <!--пример девять-->
+            <img
+              src="./images-portfolio/growing-business.jpg"
+              alt="примеры наших работ"
+              width="370"
+              height="294"
+            />
+            <h2 class="portfolio-header-nine">Growing Business</h2>
+            <p class="portfolio-description-nine">Приложение</p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
     <!-- footer -->
     <footer>
-      <a
-        class="logo-bottom footer-portfolio-logo"
-        lang="en"
-        href="./index.html"
-      >
+      <a class="logo-bottom" lang="en" href="./index.html">
         Web<span class="logo-studio">Studio</span>
       </a>
       <address>
-        <p class="adress-bottom footer-portfolio-adress">
-          г. Киев, пр-т Леси Украинки, 26
-        </p>
+        <p class="adress-bottom">г. Киев, пр-т Леси Украинки, 26</p>
+
+        <ul>
+          <li>
+            <a class="mail-bottom" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="tel-bottom" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
       </address>
-      <ul>
-        <li>
-          <a
-            class="mail-bottom footer-portfolio-mail"
-            href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a class="tel-bottom footer-portfolio-tel" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
     </footer>
   </body>
 </html>

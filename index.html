@@ -4,21 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      li {
-        list-style-type: none;
-      }
-      ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      a {
-        text-decoration: none;
-      }
-      :any-link {
-        color: #212121;
-      }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,15 +25,17 @@
         <!-- link -->
         <ul>
           <li>
-            <a href="./index.html" class="list-studio link-current">Студия</a>
+            <a href="./index.html" class="navigation-studio link-current"
+              >Студия</a
+            >
           </li>
           <li>
-            <a href="./portfolio.html" class="list-portfolio selection"
+            <a href="./portfolio.html" class="navigation-portfolio selection"
               >Портфолио</a
             >
           </li>
           <li>
-            <a href="./contacts.html" class="list-contacts selection"
+            <a href="./contacts.html" class="navigation-contacts selection"
               >Контакты</a
             >
           </li>
@@ -82,7 +69,7 @@
 
       <!-- наши преимущества -->
       <section>
-        <h2 class="benefit-header">Наши преимущества</h2>
+        <h2 hidden class="benefit-header">Наши преимущества</h2>
 
         <ul>
           <li>
@@ -122,7 +109,6 @@
         <ul>
           <li>
             <img
-              class="about-us-one"
               src="./images-index/programer-works-on-tablet-a.jpg"
               alt="програмист работает на планшете"
               width="370"
@@ -131,7 +117,6 @@
           </li>
           <li>
             <img
-              class="about-us-two"
               src="./images-index/programer-works-on-laptop-b.jpg"
               alt="програмист работает на ноутбук"
               width="370"
@@ -140,7 +125,6 @@
           </li>
           <li>
             <img
-              class="about-us-three"
               src="./images-index/designer-works-with-color-c.jpg"
               alt="веб-дизайнер работает с цветами"
               width="370"
@@ -157,7 +141,6 @@
           <li>
             <!--учасник 1-->
             <img
-              class="team-one-foto"
               src="./images-index/team-ighor-a.jpg"
               alt="фото члена команды"
               width="270"
@@ -169,7 +152,6 @@
           <li>
             <!--учасник 2-->
             <img
-              class="team-two-foto"
               src="./images-index/team-olga-b.jpg"
               alt="фото члена команды"
               width="270"
@@ -181,7 +163,6 @@
           <li>
             <!--учасник 3-->
             <img
-              class="team-three-foto"
               src="./images-index/team-nikolay-c.jpg"
               alt="фото члена команды"
               width="270"
@@ -193,7 +174,6 @@
           <li>
             <!--учасник 4-->
             <img
-              class="team-four-foto"
               src="./images-index/team-mikle-d.jpg"
               alt="фото члена команды"
               width="270"
@@ -208,28 +188,23 @@
 
     <!-- footer -->
     <footer>
-      <a class="logo-bottom footer-index-logo" lang="en" href="./index.html">
+      <a class="logo-bottom" lang="en" href="./index.html">
         Web<span class="logo-studio">Studio</span>
       </a>
       <address>
-        <p class="adress-bottom footer-index-adress">
-          г. Киев, пр-т Леси Украинки, 26
-        </p>
+        <p class="adress-bottom">г. Киев, пр-т Леси Украинки, 26</p>
+
+        <ul>
+          <li>
+            <a class="mail-bottom" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="tel-bottom" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
       </address>
-      <ul>
-        <li>
-          <a
-            class="mail-bottom footer-index-mail"
-            href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a class="tel-bottom footer-index-tel" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
     </footer>
   </body>
 </html>

@@ -4,21 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      li {
-        list-style-type: none;
-      }
-      ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      a {
-        text-decoration: none;
-      }
-      :any-link {
-        color: #212121;
-      }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,15 +26,17 @@
           <!-- link -->
           <ul>
             <li>
-              <a href="./index.html" class="list-studio selection">Студия</a>
+              <a href="./index.html" class="navigation-studio selection"
+                >Студия</a
+              >
             </li>
             <li>
-              <a href="./portfolio.html" class="list-portfolio selection"
+              <a href="./portfolio.html" class="navigation-portfolio selection"
                 >Портфолио</a
               >
             </li>
             <li>
-              <a href="./contacts.html" class="list-contacts link-current"
+              <a href="./contacts.html" class="navigation-contacts link-current"
                 >Контакты</a
               >
             </li>
@@ -77,14 +64,23 @@
 
     <!-- footer -->
     <footer>
-      <a lang="en" href="./index.html"> WebStudio </a>
+      <a class="logo-bottom" lang="en" href="./index.html">
+        Web<span class="logo-studio">Studio</span>
+      </a>
       <address>
-        <p>г. Киев, пр-т Леси Украинки, 26</p>
+        <p class="adress-bottom">г. Киев, пр-т Леси Украинки, 26</p>
+
+        <ul>
+          <li>
+            <a class="mail-bottom" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="tel-bottom" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+        </ul>
       </address>
-      <ul class="list">
-        <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
     </footer>
   </body>
 </html>
