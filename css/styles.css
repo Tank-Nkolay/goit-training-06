@@ -1,63 +1,76 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #ffffff;
-  color: #212121;
-  font-weight: 400;
+  background-color: var(--color-background-main);
+  color: var(--color-main);
+  font-size: 14px;
 }
 
+/* ------ визуальные настройки -------- */
+/* убираем точки, маркеры и подчеркивания*/
 li {
   list-style-type: none;
 }
-ul {
-  margin-left: 0;
-  padding-left: 0;
-}
-a {
+.link {
+  color: var(--color-main);
   text-decoration: none;
 }
-:any-link {
-  color: #212121;
+.link-decoration {
+  text-decoration: none;
+  font-style: normal;
 }
 
-/* changeable rules */
+/* изменяемые цвета */
 :root {
+  --color-main: #212121;
+  --color-background-main: #ffffff;
   --color-text: #757575;
-  --color-logo: #2196f3;
+  --color-logo-main: #2196f3;
+  --color-logo-second: #212121;
+  --color-selection-text: #ffffff;
+  --color-selection-background: #2196f3;
   --color-button-portfolio: #f5f4fa;
+  --color-background-section-one: #2f303a;
+  --color-background-section-two: #f5f4fa;
+  --color-technical-text: #ff0000;
 }
+
+/* выделение */
 .selection:hover,
 .selection:focus {
-  color: #2196f3;
+  color: var(--color-selection-text);
+  background-color: var(--color-selection-background);
 }
 .cursor-view {
   cursor: pointer;
 }
 
 /* ----- header all ----- */
+/* линия под хедером */
+.line {
+  border-bottom: 1px solid #ececec;
+}
 
 /* logo */
-.logo-top {
+.logo {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-
   letter-spacing: 0.03em;
-  color: var(--color-logo);
+  color: var(--color-logo-main);
 }
-.logo-studio {
-  color: #212121;
+.logo-studio-top {
+  color: var(--color-logo-second);
 }
 
 /* link */
 .link-current {
-  color: #2196f3;
+  color: var(--color-selection-background);
 }
 
 /* studio */
 .navigation-studio {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -65,7 +78,6 @@ a {
 /* portfolio */
 .navigation-portfolio {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -73,7 +85,6 @@ a {
 /* contacts */
 .navigation-contacts {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
@@ -81,126 +92,71 @@ a {
 /* email */
 .contacts-email {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--color-text);
 }
 
 /* tel */
 .contacts-tel {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--color-text);
 }
 
 /* ----- main studio ----- */
 
-.studio-hero {
-  background-color: #2f303a;
+/* текст описания для всех */
+.text-description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/* studio ГЕРОЙ секция */
+.studio-section-hero {
+  background-color: var(--color-background-section-one);
+}
+
+/* studio ГЕРОЙ заглавие */
+.studio-hero-header {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-.button-main-index {
-  color: #ffffff;
-  background-color: #2196f3;
-
+/* studio ГЕРОЙ кнопка */
+.button-main-studio {
+  font-family: inherit;
+  color: var(--color-selection-text);
+  background-color: var(--color-selection-background);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
-/* наши преимущества studio */
-
+/* studio наши преимущества */
+/* studio наши преимущества технический главный заголовок */
 .benefit-header {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: red;
+  color: var(--color-technical-text);
 }
 
-.benefit-one-slogan {
+/* studio наши преимущества заголовки разделов */
+.benefit-slogan {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-.benefit-one-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-.benefit-two-slogan {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.benefit-two-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-.benefit-three-slogan {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.benefit-three-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-.benefit-four-slogan {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.benefit-four-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-/* про нас studio */
-
+/* studio чем мы занимаемся заголовок */
 .about-us-header {
   font-weight: 700;
   font-size: 36px;
@@ -208,344 +164,121 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* наша команда studio */
+/* studio наша команда */
+/* studio наша команда цвет секции */
+.studio-section-team {
+  background-color: var(--color-background-section-two);
+}
 
-/* учасник 1 */
-.team-header {
+/* studio наша команда главный заголовок */
+.team-main-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
-.team-one-name {
+/* studio наша команда имена команды */
+.team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-.team-one-role {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-/* учасник 2 */
-.team-two-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-}
-
-.team-two-role {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-/* учасник 3 */
-.team-three-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-}
-
-.team-three-role {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
-}
-
-/* учасник 4 */
-.team-four-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-}
-
-.team-four-role {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--color-text);
 }
 
 /* ----- footer ----- */
+/* футер секция */
+.footer-section {
+  background-color: var(--color-background-section-one);
+}
 
-.logo-bottom {
+/* нижний логоттип часть студио */
+.logo-studio-bottom {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-
   letter-spacing: 0.03em;
-  color: var(--color-logo);
+  color: var(--color-selection-text);
 }
 
+/* нижний адрес */
 .adress-bottom {
   font-style: normal;
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
-  color: #ffffff;
-  background-color: #2f303a;
+  color: var(--color-selection-text);
 }
 
+/* нижний эмейл */
 .mail-bottom {
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
-  background-color: #2f303a;
 }
 
+/* нижний телефон */
 .tel-bottom {
-  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
-  background-color: #2f303a;
-}
-
-/* footer index position */
-.footer-index-logo {
-  position: absolute;
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 2157px;
-}
-.footer-index-adress {
-  position: absolute;
-  left: 215px;
-  top: 2208px;
-}
-.footer-index-mail {
-  position: absolute;
-  left: 215px;
-  top: 2238px;
-}
-.footer-index-tel {
-  position: absolute;
-  left: 215px;
-  top: 2268px;
 }
 
 /* ----- portfolio----- */
+/* портфолио примеры робот в коробке */
+.box-example {
+  width: 370px;
+  height: 404px;
+  border: 1px solid #ececec;
+}
 
 /* техническое заглавие */
 .portfolio-hero {
-  color: red;
+  color: var(--color-technical-text);
 }
 
-/* кнопки выбора portfolio */
+/* portfolio кнопка все */
 .button-portfolio-all {
-  background: var(--color-button-portfolio);
+  font-family: inherit;
+  color: var(--color-selection-text);
+  background-color: var(--color-selection-background);
   width: 73px;
   height: 38px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-
   text-align: center;
   letter-spacing: 0.03em;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-.button-portfolio-site {
+/* portfolio кнопка выбора  */
+.button-portfolio-choice {
+  font-family: inherit;
   background: var(--color-button-portfolio);
-  width: 128px;
-  height: 38px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
 }
 
-.button-portfolio-app {
-  background: var(--color-button-portfolio);
-  width: 145px;
-  height: 38px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-}
-
-.button-portfolio-design {
-  background: var(--color-button-portfolio);
-  width: 103px;
-  height: 38px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-}
-
-.button-portfolio-marketing {
-  background: var(--color-button-portfolio);
-  width: 130px;
-  height: 38px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-
-  text-align: center;
-  letter-spacing: 0.03em;
-  border-radius: 4px;
-}
-
-/* примеры наших робот */
-
-/* пример один */
-.portfolio-header-one {
+/* портфолио примеры наших робот */
+/* портфолио заголовок примера */
+.portfolio-box-header {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-description-one {
+
+/* портфолио текст примера */
+.portfolio-box-text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--color-text);
-}
-
-/* пример два */
-.portfolio-header-two {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-two {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример три */
-.portfolio-header-three {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-three {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример четыре */
-.portfolio-header-four {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-four {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример пять */
-.portfolio-header-five {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-five {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример шесть */
-.portfolio-header-six {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-six {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример семь */
-.portfolio-header-seven {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-seven {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример восемь */
-.portfolio-header-eight {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-eight {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-}
-
-/* пример девять*/
-.portfolio-header-nine {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.portfolio-description-nine {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
 }
