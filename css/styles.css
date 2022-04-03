@@ -1,3 +1,24 @@
+/* ----- изменяемые цвета ----- */
+:root {
+  --color-main: #212121;
+  --color-background-main: #ffffff;
+  --color-text: #757575;
+  --color-logo-main: #2196f3;
+  --color-logo-second-top: #212121;
+  --color-logo-second-footer: #ffffff;
+  --color-hero-header: #ffffff;
+  --color-selection-nav-text: #2196f3;
+  --color-selection-button-text: #ffffff;
+  --color-selection-button-background: #2196f3;
+  --color-button-portfolio: #f5f4fa;
+  --color-background-section-one: #2f303a;
+  --color-background-section-two: #f5f4fa;
+  --color-technical-text: #ff0000;
+  --color-line-header: #ececec;
+  --color-line-box: #eeeeee;
+  --color-footer-adress: #ffffff;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--color-background-main);
@@ -5,49 +26,46 @@ body {
   font-size: 14px;
 }
 
-/* ------ визуальные настройки -------- */
-/* убираем точки, маркеры и подчеркивания*/
-li {
+/* ----- убираем точки, маркеры и подчеркивания ----- */
+
+.list {
   list-style-type: none;
 }
+
 .link {
   color: var(--color-main);
   text-decoration: none;
 }
+
 .link-decoration {
   text-decoration: none;
   font-style: normal;
 }
 
-/* изменяемые цвета */
-:root {
-  --color-main: #212121;
-  --color-background-main: #ffffff;
-  --color-text: #757575;
-  --color-logo-main: #2196f3;
-  --color-logo-second: #212121;
-  --color-selection-text: #ffffff;
-  --color-selection-background: #2196f3;
-  --color-button-portfolio: #f5f4fa;
-  --color-background-section-one: #2f303a;
-  --color-background-section-two: #f5f4fa;
-  --color-technical-text: #ff0000;
+/* ------ выделение ----- */
+
+/* показываем на какой мы странице */
+.link-current {
+  color: var(--color-selection-nav-text);
 }
 
-/* выделение */
-.selection:hover,
-.selection:focus {
-  color: var(--color-selection-text);
-  background-color: var(--color-selection-background);
+/* tab навигации */
+.selection-nav:hover,
+.selection-nav:focus {
+  color: var(--color-selection-nav-text);
 }
-.cursor-view {
-  cursor: pointer;
+
+/* tab кнопок */
+.selection-button:hover,
+.selection-button:focus {
+  color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-background);
 }
 
 /* ----- header all ----- */
 /* линия под хедером */
 .line {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--color-line-header);
 }
 
 /* logo */
@@ -60,12 +78,7 @@ li {
   color: var(--color-logo-main);
 }
 .logo-studio-top {
-  color: var(--color-logo-second);
-}
-
-/* link */
-.link-current {
-  color: var(--color-selection-background);
+  color: var(--color-logo-second-top);
 }
 
 /* studio */
@@ -126,20 +139,21 @@ li {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-hero-header);
 }
 
 /* studio ГЕРОЙ кнопка */
 .button-main-studio {
   font-family: inherit;
-  color: var(--color-selection-text);
-  background-color: var(--color-selection-background);
+  color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-background);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* studio наши преимущества */
@@ -186,6 +200,15 @@ li {
   letter-spacing: 0.03em;
 }
 
+/* карточка команды */
+.ind-team-box {
+  width: 270px;
+  background-color: var(--color-background-main);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 /* ----- footer ----- */
 /* футер секция */
 .footer-section {
@@ -199,7 +222,7 @@ li {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--color-selection-text);
+  color: var(--color-logo-second-footer);
 }
 
 /* нижний адрес */
@@ -207,7 +230,7 @@ li {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--color-selection-text);
+  color: var(--color-footer-adress);
 }
 
 /* нижний эмейл */
@@ -229,7 +252,7 @@ li {
 .box-example {
   width: 370px;
   height: 404px;
-  border: 1px solid #ececec;
+  border: 1px solid var(--color-line-box);
 }
 
 /* техническое заглавие */
@@ -240,8 +263,8 @@ li {
 /* portfolio кнопка все */
 .button-portfolio-all {
   font-family: inherit;
-  color: var(--color-selection-text);
-  background-color: var(--color-selection-background);
+  color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-background);
   width: 73px;
   height: 38px;
   font-weight: 500;
@@ -252,6 +275,7 @@ li {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* portfolio кнопка выбора  */
@@ -264,6 +288,7 @@ li {
   text-align: center;
   letter-spacing: 0.03em;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* портфолио примеры наших робот */
