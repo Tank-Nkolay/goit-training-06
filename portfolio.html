@@ -11,232 +11,284 @@
       rel="stylesheet"
     />
     <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
     <header class="line">
-      <nav>
-        <!-- logo -->
-        <a class="logo link-decoration" lang="en" href="./index.html">
-          Web<span class="logo-studio-top">Studio</span>
-        </a>
+      <div class="container header-line">
+        <nav class="header-line">
+          <!-- logo -->
+          <a class="logo link-decoration" lang="en" href="./index.html">
+            Web<span class="logo-studio-top">Studio</span>
+          </a>
 
-        <!-- link -->
-        <ul>
-          <li class="list">
-            <a class="navigation-studio selection-nav link" href="./index.html"
-              >Студия</a
+          <!-- link -->
+          <ul class="header-line">
+            <li class="list nav-position">
+              <a
+                class="navigation-studio selection-nav link"
+                href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="list nav-position">
+              <a
+                class="navigation-portfolio selection-nav link link-current"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="list nav-position">
+              <a
+                class="navigation-contacts selection-nav link"
+                href="./contacts.html"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- contacts -->
+        <ul class="header-line">
+          <li class="list contacts-position">
+            <a
+              class="contacts-email selection-nav link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
             >
           </li>
-          <li class="list">
-            <a
-              class="navigation-portfolio selection-nav link link-current"
-              href="./portfolio.html"
-              >Портфолио</a
-            >
-          </li>
-          <li class="list">
-            <a
-              class="navigation-contacts selection-nav link"
-              href="./contacts.html"
-              >Контакты</a
+          <li class="list contacts-position">
+            <a class="contacts-tel selection-nav link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
             >
           </li>
         </ul>
-      </nav>
-
-      <!-- contacts -->
-      <ul>
-        <li class="list">
-          <a
-            class="contacts-email selection-nav link"
-            href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="list">
-          <a class="contacts-tel selection-nav link" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      </div>
     </header>
 
-    <!-- main -->
+    <!-- main portfolio -->
     <main>
-      <!--кнопки выбора работ-->
       <section>
-        <h1 hidden>Примеры наших робот</h1>
-        <ul>
-          <li class="list">
-            <button type="button" class="button-portfolio-all">Все</button>
-          </li>
-          <li class="list">
-            <button
-              type="button"
-              class="button-portfolio-choice selection-button"
-            >
-              Веб-сайты
-            </button>
-          </li>
-          <li class="list">
-            <button
-              type="button"
-              class="button-portfolio-choice selection-button"
-            >
-              Приложения
-            </button>
-          </li>
-          <li class="list">
-            <button
-              type="button"
-              class="button-portfolio-choice selection-button"
-            >
-              Дизайн
-            </button>
-          </li>
-          <li class="list">
-            <button
-              type="button"
-              class="button-portfolio-choice selection-button"
-            >
-              Маркетинг
-            </button>
-          </li>
-        </ul>
+        <!-- технический заголовок, прячем -->
+        <div class="container portfolio-position">
+          <h1 hidden>Примеры наших робот</h1>
 
-        <!--примеры наших работ-->
-        <ul>
-          <!--пример один-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/tehno-kryak.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-box-header">Технокряк</h2>
-            <p class="portfolio-box-text">Веб-сайт</p>
-          </li>
-          <!--пример два-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/poster-neworlean.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-two">
-              Постер New Orlean vs Golden Star
-            </h2>
-            <p class="text-description">Дизайн</p>
-          </li>
-          <!--пример три-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/rest-seafood.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-three">Ресторан Seafood</h2>
-            <p class="text-description">Приложение</p>
-          </li>
-          <!--пример четыре-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/project-prime.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-four">Проект Prime</h2>
-            <p class="text-description">Маркетинг</p>
-          </li>
-          <!--пример пять-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/project-boxes.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-five">Проект Boxes</h2>
-            <p class="text-description">Приложение</p>
-          </li>
-          <!--пример шесть-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/inspiration.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-six">Inspiration has no Borders</h2>
-            <p class="text-description">Веб-сайт</p>
-          </li>
-          <!--пример семь-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/limited-edition.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-seven">Издание Limited Edition</h2>
-            <p class="text-description">Дизайн</p>
-          </li>
-          <!--пример восемь-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/project-lab.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-eight">Проект LAB</h2>
-            <p class="text-description">Маркетинг</p>
-          </li>
-          <!--пример девять-->
-          <li class="box-example list">
-            <img
-              src="./images-portfolio/growing-business.jpg"
-              alt="примеры наших работ"
-              width="370"
-              height="294"
-            />
-            <h2 class="portfolio-header-nine">Growing Business</h2>
-            <p class="text-description">Приложение</p>
-          </li>
-        </ul>
+          <!--кнопки выбора работ-->
+          <ul class="button-line">
+            <!-- кнопка один все -->
+            <li class="list button-position">
+              <button type="button" class="button-portfolio-all">Все</button>
+            </li>
+            <!-- кнопка два сайты -->
+            <li class="list button-position">
+              <button
+                type="button"
+                class="button-portfolio-choice selection-button"
+              >
+                Веб-сайты
+              </button>
+            </li>
+            <!-- кнопка три приложения -->
+            <li class="list button-position">
+              <button
+                type="button"
+                class="button-portfolio-choice selection-button"
+              >
+                Приложения
+              </button>
+            </li>
+            <!-- кнопка четыре дизайн -->
+            <li class="list button-position">
+              <button
+                type="button"
+                class="button-portfolio-choice selection-button"
+              >
+                Дизайн
+              </button>
+            </li>
+            <!-- кнопка пять маркетинг -->
+            <li class="list button-position">
+              <button
+                type="button"
+                class="button-portfolio-choice selection-button"
+              >
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+
+          <!--примеры наших работ-->
+          <ul class="example-line">
+            <!--пример один-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/tehno-kryak.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Технокряк</h2>
+                <p class="portfolio-box-text">Веб-сайт</p>
+              </div>
+            </li>
+            <!--пример два-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/poster-neworlean.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">
+                  Постер New Orlean vs Golden Star
+                </h2>
+                <p class="portfolio-box-text">Дизайн</p>
+              </div>
+            </li>
+            <!--пример три-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/rest-seafood.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Ресторан Seafood</h2>
+                <p class="portfolio-box-text">Приложение</p>
+              </div>
+            </li>
+            <!--пример четыре-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/project-prime.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Проект Prime</h2>
+                <p class="portfolio-box-text">Маркетинг</p>
+              </div>
+            </li>
+            <!--пример пять-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/project-boxes.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Проект Boxes</h2>
+                <p class="portfolio-box-text">Приложение</p>
+              </div>
+            </li>
+            <!--пример шесть-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/inspiration.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Inspiration has no Borders</h2>
+                <p class="portfolio-box-text">Веб-сайт</p>
+              </div>
+            </li>
+            <!--пример семь-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/limited-edition.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Издание Limited Edition</h2>
+                <p class="portfolio-box-text">Дизайн</p>
+              </div>
+            </li>
+            <!--пример восемь-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/project-lab.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Проект LAB</h2>
+                <p class="portfolio-box-text">Маркетинг</p>
+              </div>
+            </li>
+            <!--пример девять-->
+            <li class="box-example list">
+              <img
+                class="img-corect"
+                src="./images-portfolio/growing-business.jpg"
+                alt="примеры наших работ"
+                width="370"
+                height="294"
+              />
+              <div class="box-description">
+                <h2 class="portfolio-box-header">Growing Business</h2>
+                <p class="portfolio-box-text">Приложение</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <!-- footer -->
     <footer class="footer-section">
-      <a class="logo link-decoration" lang="en" href="./index.html">
-        Web<span class="logo-studio-bottom">Studio</span>
-      </a>
-      <address>
-        <p class="adress-bottom">г. Киев, пр-т Леси Украинки, 26</p>
-        <ul>
-          <li>
-            <a
-              class="mail-bottom link-decoration selection-nav"
-              href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a
-              class="tel-bottom link-decoration selection-nav"
-              href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-      </address>
+      <div class="container">
+        <a class="logo link-decoration" lang="en" href="./index.html">
+          Web<span class="logo-bottom">Studio</span>
+        </a>
+
+        <address>
+          <p class="adress-bottom address-position">
+            г. Киев, пр-т Леси Украинки, 26
+          </p>
+          <ul>
+            <li>
+              <a
+                class="mail-bottom link-decoration selection-nav address-position"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a
+                class="tel-bottom link-decoration selection-nav address-position"
+                href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
     </footer>
   </body>
 </html>
