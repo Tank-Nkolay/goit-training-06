@@ -22,34 +22,35 @@
   </head>
 
   <body>
-    <header class="line">
-      <div class="container header-line">
-        <nav class="header-line">
-          <!-- logo -->
-          <a class="logo link-decoration" lang="en" href="./index.html">
-            Web<span class="logo-studio-top">Studio</span>
-          </a>
-
-          <!-- link -->
-          <ul class="header-line">
+    <!-- section header -->
+    <header class="decor">
+      <div class="container header-horizont">
+        <!-- главная навигация сайта -->
+        <nav>
+          <ul class="header-horizont">
+            <!-- logo -->
             <li class="list nav-position">
-              <a
-                class="navigation-studio selection-nav link"
-                href="./index.html"
+              <a class="logo link-decoration" lang="en" href="./index.html">
+                Web<span class="logo-studio-top">Studio</span>
+              </a>
+            </li>
+            <!-- ссылка studio -->
+            <li class="list nav-position">
+              <a class="nav-font selection-nav link" href="./index.html"
                 >Студия</a
               >
             </li>
+            <!-- ссылка portfolio -->
             <li class="list nav-position">
               <a
-                class="navigation-portfolio selection-nav link link-current"
+                class="nav-font selection-nav link link-current"
                 href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
+            <!-- ссылка contacts -->
             <li class="list nav-position">
-              <a
-                class="navigation-contacts selection-nav link"
-                href="./contacts.html"
+              <a class="nav-font selection-nav link" href="./contacts.html"
                 >Контакты</a
               >
             </li>
@@ -57,16 +58,16 @@
         </nav>
 
         <!-- contacts -->
-        <ul class="header-line">
+        <ul class="header-horizont">
           <li class="list contacts-position">
             <a
-              class="contacts-email selection-nav link"
+              class="contacts-font selection-nav link"
               href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
           <li class="list contacts-position">
-            <a class="contacts-tel selection-nav link" href="tel:+380961111111"
+            <a class="contacts-font selection-nav link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
           </li>
@@ -76,9 +77,9 @@
 
     <!-- main portfolio -->
     <main>
-      <section>
+      <section class="section">
         <!-- технический заголовок, прячем -->
-        <div class="container portfolio-position">
+        <div class="container">
           <h1 hidden>Примеры наших робот</h1>
 
           <!--кнопки выбора работ-->
@@ -126,7 +127,7 @@
           </ul>
 
           <!--примеры наших работ-->
-          <ul class="example-line">
+          <ul class="product-horisont product-position">
             <!--пример один-->
             <li class="box-example list">
               <img
@@ -266,22 +267,23 @@
         <a class="logo link-decoration" lang="en" href="./index.html">
           Web<span class="logo-bottom">Studio</span>
         </a>
-
         <address>
-          <p class="adress-bottom address-position">
-            г. Киев, пр-т Леси Украинки, 26
-          </p>
           <ul>
-            <li>
+            <li class="address-position">
+              <p class="adress-bottom address-position">
+                г. Киев, пр-т Леси Украинки, 26
+              </p>
+            </li>
+            <li class="address-position">
               <a
-                class="mail-bottom link-decoration selection-nav address-position"
+                class="mail-bottom link-decoration selection-nav"
                 href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="address-position">
               <a
-                class="tel-bottom link-decoration selection-nav address-position"
+                class="tel-bottom link-decoration selection-nav"
                 href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >

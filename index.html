@@ -23,34 +23,34 @@
 
   <body>
     <!-- section header -->
-    <header class="line">
-      <div class="container header-line">
-        <nav class="header-line">
-          <!-- logo -->
-          <a class="logo link-decoration" lang="en" href="./index.html">
-            Web<span class="logo-studio-top">Studio</span>
-          </a>
-
-          <!-- link -->
-          <ul class="header-line">
+    <header class="decor">
+      <div class="container header-horizont">
+        <!-- главная навигация сайта -->
+        <nav>
+          <ul class="header-horizont">
+            <!-- logo -->
+            <li class="list nav-position">
+              <a class="logo link-decoration" lang="en" href="./index.html">
+                Web<span class="logo-studio-top">Studio</span>
+              </a>
+            </li>
+            <!-- ссылка studio -->
             <li class="list nav-position">
               <a
-                class="navigation-studio selection-nav link link-current"
+                class="nav-font selection-nav link link-current"
                 href="./index.html"
                 >Студия</a
               >
             </li>
+            <!-- ссылка portfolio -->
             <li class="list nav-position">
-              <a
-                class="navigation-portfolio selection-nav link"
-                href="./portfolio.html"
+              <a class="nav-font selection-nav link" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
+            <!-- ссылка contacts -->
             <li class="list nav-position">
-              <a
-                class="navigation-contacts selection-nav link"
-                href="./contacts.html"
+              <a class="nav-font selection-nav link" href="./contacts.html"
                 >Контакты</a
               >
             </li>
@@ -58,16 +58,16 @@
         </nav>
 
         <!-- contacts -->
-        <ul class="header-line">
+        <ul class="header-horizont">
           <li class="list contacts-position">
             <a
-              class="contacts-email selection-nav link"
+              class="contacts-font selection-nav link"
               href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
           <li class="list contacts-position">
-            <a class="contacts-tel selection-nav link" href="tel:+380961111111"
+            <a class="contacts-font selection-nav link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
           </li>
@@ -78,25 +78,22 @@
     <!-- main studio -->
     <main>
       <!--section hero -->
-      <section class="studio-section-hero">
+      <section class="section studio-section-hero">
         <div class="container">
           <h1 class="studio-hero-header">
             Эффективные решения для вашего бизнеса
           </h1>
-          <div class="button-studio-position">
-            <button type="button" class="button-main-studio selection-button">
-              Заказать услугу
-            </button>
-          </div>
+          <button type="button" class="button-main-studio selection-button">
+            Заказать услугу
+          </button>
         </div>
       </section>
 
-      <!-- section наши преимущества -->
-      <section>
-        <div class="container section-benefit">
-          <h2 hidden class="benefit-header">Наши преимущества</h2>
-
-          <ul class="makes-line">
+      <!-- section чем мы занимаемся-->
+      <!-- наши преимущества -->
+      <section class="section">
+        <div class="container">
+          <ul class="makes-horizont">
             <li class="list benefit-list">
               <h3 class="benefit-slogan">Внимание к деталям</h3>
               <p class="text-description">
@@ -127,13 +124,11 @@
             </li>
           </ul>
         </div>
-      </section>
 
-      <!-- section что мы делаем-->
-      <section>
-        <div class="container section">
+        <!-- что мы делаем-->
+        <div class="container">
           <h2 class="about-us-header">Чем мы занимаемся</h2>
-          <ul class="makes-line box-position">
+          <ul class="makes-horizont box-position">
             <li class="list work-list">
               <img
                 class="img-corect"
@@ -166,12 +161,12 @@
       </section>
 
       <!-- section наша команда-->
-      <section class="studio-section-team">
-        <div class="container section">
+      <section class="section studio-section-team">
+        <div class="container">
           <h2 class="team-main-header">Наша команда</h2>
-          <ul class="makes-line box-position">
+          <ul class="makes-horizont box-position">
             <!--учасник 1-->
-            <li class="list ind-team-box team-list">
+            <li class="list ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-ighor-a.jpg"
@@ -179,13 +174,13 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Игорь Демьяненко</h3>
-              <p class="text-description team-position" lang="en">
-                Product Designer
-              </p>
+              <div class="container-team">
+                <h3 class="team-name">Игорь Демьяненко</h3>
+                <p class="text-description" lang="en">Product Designer</p>
+              </div>
             </li>
             <!--учасник 2-->
-            <li class="list ind-team-box team-list">
+            <li class="list ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-olga-b.jpg"
@@ -193,13 +188,13 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Ольга Репина</h3>
-              <p class="text-description team-position" lang="en">
-                Frontend Developer
-              </p>
+              <div class="container-team">
+                <h3 class="team-name">Ольга Репина</h3>
+                <p class="text-description" lang="en">Frontend Developer</p>
+              </div>
             </li>
             <!--учасник 3-->
-            <li class="list ind-team-box team-list">
+            <li class="list ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-nikolay-c.jpg"
@@ -207,11 +202,13 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Николай Тарасов</h3>
-              <p class="text-description team-position" lang="en">Marketing</p>
+              <div class="container-team">
+                <h3 class="team-name">Николай Тарасов</h3>
+                <p class="text-description" lang="en">Marketing</p>
+              </div>
             </li>
             <!--учасник 4-->
-            <li class="list ind-team-box team-list">
+            <li class="list ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-mikle-d.jpg"
@@ -219,10 +216,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-name">Михаил Ермаков</h3>
-              <p class="text-description team-position" lang="en">
-                UI Designer
-              </p>
+              <div class="container-team">
+                <h3 class="team-name">Михаил Ермаков</h3>
+                <p class="text-description" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -235,22 +232,23 @@
         <a class="logo link-decoration" lang="en" href="./index.html">
           Web<span class="logo-bottom">Studio</span>
         </a>
-
         <address>
-          <p class="adress-bottom address-position">
-            г. Киев, пр-т Леси Украинки, 26
-          </p>
           <ul>
-            <li>
+            <li class="address-position">
+              <p class="adress-bottom address-position">
+                г. Киев, пр-т Леси Украинки, 26
+              </p>
+            </li>
+            <li class="address-position">
               <a
-                class="mail-bottom link-decoration selection-nav address-position"
+                class="mail-bottom link-decoration selection-nav"
                 href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="address-position">
               <a
-                class="tel-bottom link-decoration selection-nav address-position"
+                class="tel-bottom link-decoration selection-nav"
                 href="tel:+380961111111"
                 >+38 096 111 11 11</a
               >

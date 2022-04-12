@@ -1,5 +1,4 @@
 /* ------ глобальные правила ----- */
-
 p,
 h1,
 h2,
@@ -51,7 +50,6 @@ body {
 }
 
 /* ----- убираем точки, маркеры и подчеркивания ----- */
-
 .list {
   list-style-type: none;
 }
@@ -86,7 +84,7 @@ body {
   background-color: var(--color-selection-button-background);
 }
 
-/* ------ контейнер ----- */
+/* ----------- контейнер ---------- */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -98,14 +96,14 @@ body {
 /* ----- header all ----- */
 
 /* выравнивание элементов header в линю и минимальная высота */
-.header-line {
+.header-horizont {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
 }
 /* линия под хедером */
-.line {
+.decor {
   border-bottom: 1px solid var(--color-line-header);
 }
 
@@ -115,6 +113,9 @@ body {
   margin-left: 50px;
 }
 .nav-position:first-child {
+  margin-left: 0px;
+}
+.nav-position:nth-child(2) {
   margin-left: 91px;
 }
 
@@ -131,21 +132,14 @@ body {
   color: var(--color-logo-second-top);
 }
 
-/* studio */
-.navigation-studio {
+/* шрифты и расположение для studio, portfolio и contacts  */
+.nav-font {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-/* portfolio */
-.navigation-portfolio {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-/* contacts */
+/* расположение contacts */
 
 .contacts-position {
   display: block;
@@ -155,22 +149,8 @@ body {
   margin-right: 0;
 }
 
-.navigation-contacts {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-/* email */
-.contacts-email {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--color-text);
-}
-
-/* tel */
-.contacts-tel {
+/* шрифта email и tel */
+.contacts-font {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -178,6 +158,12 @@ body {
 }
 
 /* -------------- main studio --------------- */
+
+/* глобальные параметры секций */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /* текст описания для всего studio и верхний отступ от заголовка */
 .text-description {
@@ -192,6 +178,8 @@ body {
   background-color: var(--color-background-section-one);
   min-height: 600px;
   padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 /* studio ГЕРОЙ заглавие */
@@ -204,18 +192,12 @@ body {
   color: var(--color-hero-header);
 
   max-width: 696px;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 /* studio ГЕРОЙ кнопка */
-
-.button-studio-position {
-  padding-top: 30px;
-  text-align: center;
-}
-
 .button-main-studio {
   font-family: inherit;
   color: var(--color-selection-button-text);
@@ -239,17 +221,9 @@ body {
 /* ----- другие секции студио ----- */
 
 /* ----- глобальные настройки для секций студио ----- */
-/* паддинг секций */
-.section-benefit {
-  padding-top: 94px;
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 /* делаем блоки в линию */
-.makes-line {
+.makes-horizont {
   display: flex;
   align-items: center;
 }
@@ -269,11 +243,6 @@ body {
   margin-left: 0px;
 }
 
-/* studio наши преимущества технический главный заголовок */
-.benefit-header {
-  color: var(--color-technical-text);
-}
-
 /* studio наши преимущества заголовки разделов */
 .benefit-slogan {
   font-weight: 700;
@@ -285,7 +254,7 @@ body {
 /* studio БЛОК мы занимаемся */
 /* размещение карточек описания что мы делаем */
 .work-list {
-  margin-left: 27px;
+  margin-left: 30px;
 }
 .work-list:first-child {
   margin-left: 0px;
@@ -298,15 +267,22 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-top: 94px;
 }
 
 /* studio БЛОК наша команда */
 /* размещение карточек описания наша команда */
-.team-list {
+.team-box-position {
   margin-left: 30px;
 }
-.team-list:first-child {
+.team-box-position:first-child {
   margin-left: 0px;
+}
+
+.container-team {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* studio наша команда цвет секции */
@@ -329,8 +305,6 @@ body {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-align: center;
-  margin-top: 30px;
 }
 
 /* карточка команды */
@@ -342,12 +316,6 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* центрирование и нижний отступ должность учасника команды */
-.team-position {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
 /* ---------- footer ---------- */
 
 /* футер секция */
@@ -355,6 +323,7 @@ body {
   background-color: var(--color-background-section-one);
   min-height: 252px;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* цвет нижнего логотипа */
@@ -369,7 +338,7 @@ body {
 
 /* расположение нижнего адреса и контактов */
 .address-position {
-  margin-top: 8px;
+  margin-top: 9px;
 }
 .address-position:first-child {
   margin-top: 20px;
@@ -397,14 +366,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ---------- portfolio---------- */
-
-/* ----- глобальные настройки для секций портфолио ----- */
-/* глобальный паддинг основной секции */
-.portfolio-position {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+/* --------------- portfolio --------------- */
 
 /* техническое заглавие */
 .portfolio-hero {
@@ -468,10 +430,22 @@ body {
 
 /* портфолио примеры наших робот */
 /* делаем примеры наших работ в линию */
-.example-line {
+.product-horisont {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+
+/* верхний маржин секции примеры наших работ */
+.product-position {
+  margin-top: 50px;
+}
+/* отступы коробок на странице */
+.box-example:nth-child(3n + 1) {
+  margin-left: 0px;
+}
+.box-example:nth-child(-n + 3) {
+  margin-top: 0px;
 }
 
 /* портфолио примеры робот в коробке */
@@ -481,14 +455,6 @@ body {
   border: 1px solid var(--color-line-box);
   margin-left: 30px;
   margin-top: 30px;
-}
-
-/* отступы коробок на странице */
-.box-example:nth-child(3n + 1) {
-  margin-left: 0px;
-}
-.box-example:nth-child(-n + 3) {
-  margin-top: 50px;
 }
 
 /* коробка текста описания наших работ */
