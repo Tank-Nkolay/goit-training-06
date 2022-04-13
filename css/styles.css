@@ -14,6 +14,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 /* убираем нижний отступ у изображений */
@@ -49,11 +50,6 @@ body {
   font-size: 14px;
 }
 
-/* ----- убираем точки, маркеры и подчеркивания ----- */
-.list {
-  list-style-type: none;
-}
-
 .link {
   color: var(--color-main);
   text-decoration: none;
@@ -61,7 +57,6 @@ body {
 
 .link-decoration {
   text-decoration: none;
-  font-style: normal;
 }
 
 /* ------ выделение ----- */
@@ -107,18 +102,6 @@ body {
   border-bottom: 1px solid var(--color-line-header);
 }
 
-/* расположение навигации */
-.nav-position {
-  display: block;
-  margin-left: 50px;
-}
-.nav-position:first-child {
-  margin-left: 0px;
-}
-.nav-position:nth-child(2) {
-  margin-left: 91px;
-}
-
 /* logo */
 .logo {
   font-family: Raleway;
@@ -127,9 +110,18 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--color-logo-main);
+  margin-right: 93px;
 }
 .logo-studio-top {
   color: var(--color-logo-second-top);
+}
+
+/* расположение навигации */
+.nav-position {
+  margin-left: 50px;
+}
+.nav-position:first-child {
+  margin-left: 0px;
 }
 
 /* шрифты и расположение для studio, portfolio и contacts  */
@@ -142,7 +134,6 @@ body {
 /* расположение contacts */
 
 .contacts-position {
-  display: block;
   margin-right: 50px;
 }
 .contacts-position:last-child {
@@ -176,7 +167,6 @@ body {
 /* ----- studio ГЕРОЙ секция ------ */
 .studio-section-hero {
   background-color: var(--color-background-section-one);
-  min-height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -223,7 +213,7 @@ body {
 /* ----- глобальные настройки для секций студио ----- */
 
 /* делаем блоки в линию */
-.makes-horizont {
+.items-horizont {
   display: flex;
   align-items: center;
 }
@@ -231,6 +221,8 @@ body {
 /* размещение карточек чем мы занимаемся и наша команда */
 .box-position {
   margin-top: 50px;
+  display: flex;
+  align-items: center;
 }
 
 /* studio БЛОК наши преимущества */
@@ -252,6 +244,11 @@ body {
 }
 
 /* studio БЛОК мы занимаемся */
+/* верхний отступ */
+.wrap {
+  margin-top: 94px;
+}
+
 /* размещение карточек описания что мы делаем */
 .work-list {
   margin-left: 30px;
@@ -267,7 +264,6 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-top: 94px;
 }
 
 /* studio БЛОК наша команда */
@@ -321,9 +317,13 @@ body {
 /* футер секция */
 .footer-section {
   background-color: var(--color-background-section-one);
-  min-height: 252px;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+/* нижний отступ от логотипа */
+.logo-footer {
+  margin-bottom: 20px;
 }
 
 /* цвет нижнего логотипа */
@@ -336,12 +336,18 @@ body {
   color: var(--color-logo-second-footer);
 }
 
+/* верхний отступ секкции адрес и убираем стьль италик */
+.aside-position {
+  margin-top: 20px;
+  font-style: normal;
+}
+
 /* расположение нижнего адреса и контактов */
 .address-position {
   margin-top: 9px;
 }
 .address-position:first-child {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 /* нижний адрес */
@@ -450,9 +456,7 @@ body {
 
 /* портфолио примеры робот в коробке */
 .box-example {
-  display: block;
   width: 370px;
-  border: 1px solid var(--color-line-box);
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -460,6 +464,8 @@ body {
 /* коробка текста описания наших работ */
 .box-description {
   padding: 20px 24px;
+  border: 1px solid var(--color-line-box);
+  border-top: none;
 }
 
 /* портфолио заголовок примера */

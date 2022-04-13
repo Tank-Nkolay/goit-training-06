@@ -26,45 +26,42 @@
     <header class="decor">
       <div class="container header-horizont">
         <!-- главная навигация сайта -->
-        <nav>
+        <nav class="header-horizont">
+          <!-- logo -->
+          <a class="logo link-decoration" lang="en" href="./index.html">
+            Web<span class="logo-studio-top">Studio</span>
+          </a>
           <ul class="header-horizont">
-            <!-- logo -->
-            <li class="list nav-position">
-              <a class="logo link-decoration" lang="en" href="./index.html">
-                Web<span class="logo-studio-top">Studio</span>
-              </a>
-            </li>
             <!-- ссылка studio -->
-            <li class="list nav-position">
+            <li class="nav-position">
               <a class="nav-font link link-current" href="./index.html"
                 >Студия</a
               >
             </li>
             <!-- ссылка portfolio -->
-            <li class="list nav-position">
+            <li class="nav-position">
               <a class="nav-font selection-nav link" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
             <!-- ссылка contacts -->
-            <li class="list nav-position">
+            <li class="nav-position">
               <a class="nav-font selection-nav link" href="./contacts.html"
                 >Контакты</a
               >
             </li>
           </ul>
         </nav>
-
         <!-- contacts -->
         <ul class="header-horizont">
-          <li class="list contacts-position">
+          <li class="contacts-position">
             <a
               class="contacts-font selection-nav link"
               href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
-          <li class="list contacts-position">
+          <li class="contacts-position">
             <a class="contacts-font selection-nav link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
@@ -76,7 +73,7 @@
     <!-- main studio -->
     <main>
       <!--section hero -->
-      <section class="section studio-section-hero">
+      <section class="studio-section-hero">
         <div class="container">
           <h1 class="studio-hero-header">
             Эффективные решения для вашего бизнеса
@@ -91,29 +88,29 @@
       <!-- наши преимущества -->
       <section class="section">
         <div class="container">
-          <ul class="makes-horizont">
-            <li class="list benefit-list">
+          <ul class="items-horizont">
+            <li class="benefit-list">
               <h3 class="benefit-slogan">Внимание к деталям</h3>
               <p class="text-description">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="list benefit-list">
+            <li class="benefit-list">
               <h3 class="benefit-slogan">Пунктуальность</h3>
               <p class="text-description">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="list benefit-list">
+            <li class="benefit-list">
               <h3 class="benefit-slogan">Планирование</h3>
               <p class="text-description">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="list benefit-list">
+            <li class="benefit-list">
               <h3 class="benefit-slogan">Современные технологии</h3>
               <p class="text-description">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -121,40 +118,40 @@
               </p>
             </li>
           </ul>
-        </div>
 
-        <!-- что мы делаем-->
-        <div class="container">
-          <h2 class="about-us-header">Чем мы занимаемся</h2>
-          <ul class="makes-horizont box-position">
-            <li class="list work-list">
-              <img
-                class="img-corect"
-                src="./images-index/programer-works-on-tablet-a.jpg"
-                alt="програмист работает на планшете"
-                width="370"
-                height="294"
-              />
-            </li>
-            <li class="list work-list">
-              <img
-                class="img-corect"
-                src="./images-index/programer-works-on-laptop-b.jpg"
-                alt="програмист работает на ноутбук"
-                width="370"
-                height="294"
-              />
-            </li>
-            <li class="list work-list">
-              <img
-                class="img-corect"
-                src="./images-index/designer-works-with-color-c.jpg"
-                alt="веб-дизайнер работает с цветами"
-                width="370"
-                height="294"
-              />
-            </li>
-          </ul>
+          <!-- что мы делаем-->
+          <div class="wrap">
+            <h2 class="about-us-header">Чем мы занимаемся</h2>
+            <ul class="box-position">
+              <li class="work-list">
+                <img
+                  class="img-corect"
+                  src="./images-index/programer-works-on-tablet-a.jpg"
+                  alt="програмист работает на планшете"
+                  width="370"
+                  height="294"
+                />
+              </li>
+              <li class="work-list">
+                <img
+                  class="img-corect"
+                  src="./images-index/programer-works-on-laptop-b.jpg"
+                  alt="програмист работает на ноутбук"
+                  width="370"
+                  height="294"
+                />
+              </li>
+              <li class="work-list">
+                <img
+                  class="img-corect"
+                  src="./images-index/designer-works-with-color-c.jpg"
+                  alt="веб-дизайнер работает с цветами"
+                  width="370"
+                  height="294"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -162,9 +159,9 @@
       <section class="section studio-section-team">
         <div class="container">
           <h2 class="team-main-header">Наша команда</h2>
-          <ul class="makes-horizont box-position">
+          <ul class="box-position">
             <!--учасник 1-->
-            <li class="list ind-team-box team-box-position">
+            <li class="ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-ighor-a.jpg"
@@ -178,7 +175,7 @@
               </div>
             </li>
             <!--учасник 2-->
-            <li class="list ind-team-box team-box-position">
+            <li class="ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-olga-b.jpg"
@@ -192,7 +189,7 @@
               </div>
             </li>
             <!--учасник 3-->
-            <li class="list ind-team-box team-box-position">
+            <li class="ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-nikolay-c.jpg"
@@ -206,7 +203,7 @@
               </div>
             </li>
             <!--учасник 4-->
-            <li class="list ind-team-box team-box-position">
+            <li class="ind-team-box team-box-position">
               <img
                 class="img-corect"
                 src="./images-index/team-mikle-d.jpg"
@@ -230,7 +227,7 @@
         <a class="logo link-decoration" lang="en" href="./index.html">
           Web<span class="logo-bottom">Studio</span>
         </a>
-        <address>
+        <address class="aside-position">
           <ul>
             <li class="address-position">
               <p class="adress-bottom address-position">
