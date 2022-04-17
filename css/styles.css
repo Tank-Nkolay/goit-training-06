@@ -31,9 +31,14 @@ ol {
   --color-logo-second-top: #212121;
   --color-logo-second-footer: #ffffff;
   --color-hero-header: #ffffff;
+  --color-hero-shadow: rgba(47, 48, 58, 0.4);
   --color-selection-nav-text: #2196f3;
   --color-selection-button-text: #ffffff;
   --color-selection-button-background: #2196f3;
+  --color-social-link-team: #afb1b8;
+  --color-social-link-team-hover: #ffffff;
+  --color-social-link-team-background: transparent;
+  --color-clients-logo-studio: #afb1b8;
   --color-button-portfolio: #f5f4fa;
   --color-background-section-one: #2f303a;
   --color-background-section-two: #f5f4fa;
@@ -41,6 +46,7 @@ ol {
   --color-line-header: #ececec;
   --color-line-box: #eeeeee;
   --color-footer-adress: #ffffff;
+  --color-footer-social-background: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -72,9 +78,9 @@ body {
   color: var(--color-selection-nav-text);
 }
 
-/* tab кнопок */
-.selection-button:hover,
-.selection-button:focus {
+/* tab кнопок studio */
+.selection-button-studio:hover,
+.selection-button-studio:focus {
   color: var(--color-selection-button-text);
   background-color: var(--color-selection-button-background);
 }
@@ -119,6 +125,7 @@ body {
 /* расположение навигации */
 .nav-position {
   margin-left: 50px;
+  display: flex;
 }
 .nav-position:first-child {
   margin-left: 0px;
@@ -135,6 +142,8 @@ body {
 
 .contacts-position {
   margin-right: 50px;
+  display: flex;
+  align-items: center;
 }
 .contacts-position:last-child {
   margin-right: 0;
@@ -146,6 +155,28 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-text);
+}
+
+/* иконка конверта в контактах */
+.contacts-email-box {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.contacts-email-img:hover,
+.contacts-email-img:focus {
+  fill: var(--color-selection-nav-text);
+}
+
+/* иконка смартфона в контактах */
+.contacts-tel-box {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.contacts-tel-img:hover,
+.contacts-tel-img:focus {
+  fill: var(--color-selection-nav-text);
 }
 
 /* -------------- main studio --------------- */
@@ -164,12 +195,31 @@ body {
   margin-top: 10px;
 }
 
-/* ----- studio ГЕРОЙ секция ------ */
+/* ======================================== 
+studio ГЕРОЙ секция 
+======================================== */
+
 .studio-section-hero {
   background-color: var(--color-background-section-one);
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+}
+
+/* background картинка hero */
+.hero-background-img {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      var(--color-hero-shadow),
+      var(--color-hero-shadow)
+    ),
+    url(../images-index/hero-background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* studio ГЕРОЙ заглавие */
@@ -187,7 +237,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* studio ГЕРОЙ кнопка */
+/* ===== studio ГЕРОЙ кнопка ===== */
 .button-main-studio {
   font-family: inherit;
   color: var(--color-selection-button-text);
@@ -225,7 +275,10 @@ body {
   align-items: center;
 }
 
-/* studio БЛОК наши преимущества */
+/* ======================================== 
+studio БЛОК наши преимущества 
+======================================== */
+
 /* размещение карточек описания наших преимуществ */
 .benefit-list {
   width: 270px;
@@ -243,7 +296,22 @@ body {
   text-transform: uppercase;
 }
 
-/* studio БЛОК мы занимаемся */
+/*  */
+.benefit-box {
+  width: 270px;
+  height: 120px;
+  background-color: var(--color-background-section-two);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* ======================================== 
+studio БЛОК чем мы занимаемся
+======================================== */
+
 /* верхний отступ */
 .wrap {
   margin-top: 94px;
@@ -266,7 +334,10 @@ body {
   text-align: center;
 }
 
-/* studio БЛОК наша команда */
+/* ======================================== 
+studio БЛОК наша команда
+======================================== */
+
 /* размещение карточек описания наша команда */
 .team-box-position {
   margin-left: 30px;
@@ -275,10 +346,14 @@ body {
   margin-left: 0px;
 }
 
+/* бокс-карточка члена команды */
 .container-team {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* studio наша команда цвет секции */
@@ -312,7 +387,98 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* ---------- footer ---------- */
+/* ------- социальные сети команды ------- */
+
+/* выравниваем ссылки социальных сетей в линию и отступы */
+.social-list {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 32px;
+  margin-right: 32px;
+  gap: 10px;
+}
+/* карточка-бокс социальные сети */
+.social-item {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  fill: var(--color-social-link-team);
+  background-color: var(--color-social-link-team-background);
+}
+.social-item:hover,
+.social-item:focus {
+  fill: var(--color-selection-nav-text);
+  background-color: var(--color-selection-nav-text);
+}
+
+/* логотип svg социальные сети*/
+.social-icon {
+  fill: #afb1b8;
+}
+.social-item:hover .social-icon,
+.social-item:focus .social-icon {
+  fill: var(--color-social-link-team-hover);
+}
+
+/* ======================================== 
+studio БЛОК Постоянные клиенты 
+======================================== */
+
+/* header постоянные клиенты */
+.clients-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+/* список наших клиентов */
+/* выравниваем карточки наших клиентов в линию */
+.clients-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+/* карточка-бокс где содержится логотип клиента */
+.clients-item {
+  border: 1px solid var(--color-clients-logo-studio);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  cursor: pointer;
+  fill: var(--color-clients-logo-studio);
+}
+.clients-item:hover,
+.clients-item:focus {
+  fill: var(--color-selection-nav-text);
+  border: 1px solid var(--color-selection-nav-text);
+}
+
+/* логотип svg компании клиента */
+.clients-icon {
+  fill: #afb1b8;
+}
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
+  fill: var(--color-selection-nav-text);
+}
+
+/* ---------- ========================================
+footer 
+---------- =========================================== */
 
 /* футер секция */
 .footer-section {
@@ -320,6 +486,18 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+/* выравниваем секции адрес и соц. сети */
+.footer-horisont {
+  display: flex;
+  align-items: baseline;
+}
+/* правый отступ секции адрес от секции соц. сети */
+.section-footer-address {
+  margin-right: 70px;
+}
+
+/* --------- футер секция логотип и адрес  --------- */
 
 /* нижний отступ от логотипа */
 .logo-footer {
@@ -372,14 +550,65 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* --------------- portfolio --------------- */
+/* --------- футер секция присойдиняйтесь и соц. сети --------- */
+
+/* футер header - присоединяйтесь */
+.footer-social-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-footer-adress);
+  margin-bottom: 20px;
+}
+
+/* выравниваем ссылки социальных сетей в линию и отступы */
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 10px;
+}
+/* карточка-бокс социальные сети */
+.footer-social-item {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  background-color: var(--color-footer-social-background);
+  fill: var(--color-footer-adress);
+}
+.footer-social-item:hover,
+.footer-social-item:focus {
+  fill: var(--color-selection-nav-text);
+  background-color: var(--color-selection-nav-text);
+}
+
+/* логотип svg социальные сети*/
+.footer-social-icon {
+  fill: var(--color-footer-adress);
+}
+.footer-social-item:hover .social-icon,
+.footer-social-item:focus .social-icon {
+  fill: var(--color-social-link-team-hover);
+}
+
+/* --------------------- ===============================
+portfolio 
+------------------------ ================================== */
 
 /* техническое заглавие */
 .portfolio-hero {
   color: var(--color-technical-text);
 }
 /* ----- portfolio кнопки ----- */
-/* делаем кнопки портфолио в линию и расположение*/
+/* делаем кнопки портфолио в линию и расположение */
 .button-line {
   display: flex;
   align-items: center;
@@ -434,6 +663,15 @@ body {
   padding: 6px 22px;
 }
 
+/* tab кнопок portfolio */
+.selection-button-portfolio:hover,
+.selection-button-portfolio:focus {
+  color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-background);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 /* портфолио примеры наших робот */
 /* делаем примеры наших работ в линию */
 .product-horisont {
@@ -459,6 +697,12 @@ body {
   width: 370px;
   margin-left: 30px;
   margin-top: 30px;
+  cursor: pointer;
+}
+.box-example:hover,
+.box-example:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* коробка текста описания наших работ */

@@ -34,7 +34,7 @@
           <ul class="header-horizont">
             <!-- ссылка studio -->
             <li class="nav-position">
-              <a class="nav-font link selection-nav" href="./index.html"
+              <a class="nav-font selection-nav link" href="./index.html"
                 >Студия</a
               >
             </li>
@@ -52,9 +52,15 @@
             </li>
           </ul>
         </nav>
+
         <!-- contacts -->
         <ul class="header-horizont">
           <li class="contacts-position">
+            <div class="contacts-email-box">
+              <svg class="contacts-email-img" width="16px" height="12x">
+                <use href="./images-svg/sprite.svg#icon-envelope"></use>
+              </svg>
+            </div>
             <a
               class="contacts-font selection-nav link"
               href="mailto:info@devstudio.com"
@@ -62,6 +68,11 @@
             >
           </li>
           <li class="contacts-position">
+            <div class="contacts-tel-box">
+              <svg class="contacts-tel-img" width="10px" height="16x">
+                <use href="./images-svg/sprite.svg#icon-smartphone"></use>
+              </svg>
+            </div>
             <a class="contacts-font selection-nav link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
@@ -87,7 +98,7 @@
             <li class="button-position">
               <button
                 type="button"
-                class="button-portfolio-choice selection-button"
+                class="button-portfolio-choice selection-button-portfolio"
               >
                 Веб-сайты
               </button>
@@ -96,7 +107,7 @@
             <li class="button-position">
               <button
                 type="button"
-                class="button-portfolio-choice selection-button"
+                class="button-portfolio-choice selection-button-portfolio"
               >
                 Приложения
               </button>
@@ -105,7 +116,7 @@
             <li class="button-position">
               <button
                 type="button"
-                class="button-portfolio-choice selection-button"
+                class="button-portfolio-choice selection-button-portfolio"
               >
                 Дизайн
               </button>
@@ -114,7 +125,7 @@
             <li class="button-position">
               <button
                 type="button"
-                class="button-portfolio-choice selection-button"
+                class="button-portfolio-choice selection-button-portfolio"
               >
                 Маркетинг
               </button>
@@ -258,33 +269,90 @@
 
     <!-- footer -->
     <footer class="footer-section">
-      <div class="container">
-        <a class="logo link-decoration" lang="en" href="./index.html">
-          Web<span class="logo-bottom">Studio</span>
-        </a>
-        <address class="aside-position">
-          <ul>
-            <li class="address-position">
-              <p class="adress-bottom address-position">
-                г. Киев, пр-т Леси Украинки, 26
-              </p>
-            </li>
-            <li class="address-position">
+      <div class="container footer-horisont">
+        <!-- футер - секция - лого и адрес-->
+        <div class="section-footer-address">
+          <a class="logo link-decoration" lang="en" href="./index.html">
+            Web<span class="logo-bottom">Studio</span>
+          </a>
+          <address class="aside-position">
+            <ul>
+              <li class="address-position">
+                <p class="adress-bottom address-position">
+                  г. Киев, пр-т Леси Украинки, 26
+                </p>
+              </li>
+              <li class="address-position">
+                <a
+                  class="mail-bottom link-decoration selection-nav"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="address-position">
+                <a
+                  class="tel-bottom link-decoration selection-nav"
+                  href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <!-- футер - секция - присоединяйтесь и линк -->
+        <div>
+          <h2 class="footer-social-header">присоединяйтесь</h2>
+          <ul class="footer-social-list">
+            <li>
               <a
-                class="mail-bottom link-decoration selection-nav"
-                href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
+                class="footer-social-item"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images-svg/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="address-position">
+            <li>
               <a
-                class="tel-bottom link-decoration selection-nav"
-                href="tel:+380961111111"
-                >+38 096 111 11 11</a
+                class="footer-social-item"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images-svg/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-social-item"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images-svg/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-social-item"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-social-icon" width="20px" height="20px">
+                  <use href="./images-svg/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
