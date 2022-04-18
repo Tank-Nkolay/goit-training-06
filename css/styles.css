@@ -101,7 +101,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
 }
 /* линия под хедером */
 .decor {
@@ -136,6 +135,8 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* расположение contacts */
@@ -149,34 +150,38 @@ body {
   margin-right: 0;
 }
 
-/* шрифта email и tel */
+/* шрифт, выравнивание и падинги email и tel */
 .contacts-font {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-text);
-}
-
-/* иконка конверта в контактах */
-.contacts-email-box {
-  margin-right: 10px;
   display: flex;
   align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-.contacts-email-img:hover,
-.contacts-email-img:focus {
+
+/* выделение email и tel */
+.contacts-font:hover,
+.contacts-font:focus {
+  color: var(--color-selection-nav-text);
+}
+.contacts-font:hover .contacts-email-img,
+.contacts-font:focus .contacts-email-img {
+  fill: var(--color-selection-nav-text);
+}
+.contacts-font:hover .contacts-tel-img,
+.contacts-font:focus .contacts-tel-img {
   fill: var(--color-selection-nav-text);
 }
 
-/* иконка смартфона в контактах */
-.contacts-tel-box {
+/* отступ svg справа */
+.contacts-email-img {
   margin-right: 10px;
-  display: flex;
-  align-items: center;
 }
-.contacts-tel-img:hover,
-.contacts-tel-img:focus {
-  fill: var(--color-selection-nav-text);
+.contacts-tel-img {
+  margin-right: 10px;
 }
 
 /* -------------- main studio --------------- */
@@ -217,7 +222,7 @@ studio ГЕРОЙ секция
       var(--color-hero-shadow),
       var(--color-hero-shadow)
     ),
-    url(../images-index/hero-background.jpg);
+    url(../images/images-index/hero-background.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -394,8 +399,7 @@ studio БЛОК наша команда
   display: flex;
   align-items: center;
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
+  justify-content: center;
   gap: 10px;
 }
 /* карточка-бокс социальные сети */
