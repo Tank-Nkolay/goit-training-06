@@ -38,6 +38,8 @@ ol {
   --color-social-link-team: #afb1b8;
   --color-social-link-team-hover: #ffffff;
   --color-social-link-team-background: transparent;
+  --color-about-us-text: #ffffff;
+  --color-about-us-bg-color: rgba(47, 48, 58, 0.8);
   --color-clients-logo-studio: #afb1b8;
   --color-button-portfolio: #f5f4fa;
   --color-background-section-one: #2f303a;
@@ -47,6 +49,7 @@ ol {
   --color-line-box: #eeeeee;
   --color-footer-adress: #ffffff;
   --color-footer-social-background: rgba(255, 255, 255, 0.1);
+  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -71,18 +74,36 @@ body {
 .link-current {
   color: var(--color-selection-nav-text);
 }
+.link-current::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--color-selection-nav-text);
+}
 
 /* tab навигации */
+.selection-nav {
+  transition: color 250ms var(--animation-timing-function);
+}
+
 .selection-nav:hover,
 .selection-nav:focus {
   color: var(--color-selection-nav-text);
 }
 
 /* tab кнопок studio */
+.selection-button-studio {
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
+}
+
 .selection-button-studio:hover,
 .selection-button-studio:focus {
-  color: var(--color-selection-button-text);
-  background-color: var(--color-selection-button-background);
+  color: var(--color-selection-button-background);
+  background-color: var(--color-selection-button-text);
 }
 
 /* ----------- контейнер ---------- */
@@ -137,6 +158,7 @@ body {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
 }
 
 /* расположение contacts */
@@ -160,6 +182,7 @@ body {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms var(--animation-timing-function);
 }
 
 /* выделение email и tel */
@@ -179,8 +202,10 @@ body {
 /* отступ svg справа */
 .contacts-email-img {
   margin-right: 10px;
+  transition: fill 250ms var(--animation-timing-function);
 }
 .contacts-tel-img {
+  transition: fill 250ms var(--animation-timing-function);
   margin-right: 10px;
 }
 
@@ -325,18 +350,40 @@ studio БЛОК чем мы занимаемся
 /* размещение карточек описания что мы делаем */
 .work-list {
   margin-left: 30px;
+  position: relative;
+  display: inline-flex;
 }
 .work-list:first-child {
   margin-left: 0px;
 }
 
-/* studio чем мы занимаемся заголовок */
+/* чем мы занимаемся header */
 .about-us-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+/* чем мы занимаемся текст на карточке */
+.about-us-text {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-about-us-text);
+  background-color: var(--color-about-us-bg-color);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ======================================== 
@@ -415,6 +462,9 @@ studio БЛОК наша команда
   cursor: pointer;
   fill: var(--color-social-link-team);
   background-color: var(--color-social-link-team-background);
+
+  transition: fill 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
 }
 .social-item:hover,
 .social-item:focus {
@@ -425,6 +475,7 @@ studio БЛОК наша команда
 /* логотип svg социальные сети*/
 .social-icon {
   fill: #afb1b8;
+  transition: fill 250ms var(--animation-timing-function);
 }
 .social-item:hover .social-icon,
 .social-item:focus .social-icon {
@@ -464,6 +515,8 @@ studio БЛОК Постоянные клиенты
   height: 92px;
   cursor: pointer;
   fill: var(--color-clients-logo-studio);
+  transition: fill 250ms var(--animation-timing-function),
+    border 250ms var(--animation-timing-function);
 }
 .clients-item:hover,
 .clients-item:focus {
@@ -473,6 +526,7 @@ studio БЛОК Постоянные клиенты
 
 /* логотип svg компании клиента */
 .clients-icon {
+  transition: fill 250ms var(--animation-timing-function);
   fill: #afb1b8;
 }
 .clients-item:hover .clients-icon,
@@ -587,6 +641,8 @@ footer
   cursor: pointer;
   background-color: var(--color-footer-social-background);
   fill: var(--color-footer-adress);
+  transition: fill 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
 }
 .footer-social-item:hover,
 .footer-social-item:focus {
@@ -597,6 +653,7 @@ footer
 /* логотип svg социальные сети*/
 .footer-social-icon {
   fill: var(--color-footer-adress);
+  transition: fill 250ms var(--animation-timing-function);
 }
 .footer-social-item:hover .social-icon,
 .footer-social-item:focus .social-icon {
@@ -668,6 +725,11 @@ portfolio
 }
 
 /* tab кнопок portfolio */
+.selection-button-portfolio {
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function),
+    box-shadow 250ms var(--animation-timing-function);
+}
 .selection-button-portfolio:hover,
 .selection-button-portfolio:focus {
   color: var(--color-selection-button-text);
@@ -676,7 +738,10 @@ portfolio
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* портфолио примеры наших робот */
+/* ======================================== 
+portfolio БЛОК примеры наших робот
+======================================== */
+
 /* делаем примеры наших работ в линию */
 .product-horisont {
   display: flex;
@@ -702,11 +767,35 @@ portfolio
   margin-left: 30px;
   margin-top: 30px;
   cursor: pointer;
+  transition: box-shadow 250ms var(--animation-timing-function);
 }
 .box-example:hover,
 .box-example:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* портфолио overlay над карточкой - примеры робот */
+.box-example-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-description {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
+  position: absolute;
+  bottom: -100%;
+  transition: transform 250ms var(--animation-timing-function);
+}
+
+.box-example:hover .product-description {
+  transform: translateY(-100%);
 }
 
 /* коробка текста описания наших работ */
@@ -731,4 +820,31 @@ portfolio
   letter-spacing: 0.03em;
   color: var(--color-text);
   margin-top: 4px;
+}
+
+/* ---------- ========================================
+модальное окно
+---------- =========================================== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000;
+  /* rgba(0, 0, 0, 0.2); */
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
