@@ -201,10 +201,12 @@ body {
 
 /* отступ svg справа */
 .contacts-email-img {
+  fill: var(--color-text);
   margin-right: 10px;
   transition: fill 250ms var(--animation-timing-function);
 }
 .contacts-tel-img {
+  fill: var(--color-text);
   transition: fill 250ms var(--animation-timing-function);
   margin-right: 10px;
 }
@@ -460,7 +462,7 @@ studio БЛОК наша команда
   justify-content: center;
 
   cursor: pointer;
-  fill: var(--color-social-link-team);
+  color: var(--color-social-link-team);
   background-color: var(--color-social-link-team-background);
 
   transition: fill 250ms var(--animation-timing-function),
@@ -468,13 +470,13 @@ studio БЛОК наша команда
 }
 .social-item:hover,
 .social-item:focus {
-  fill: var(--color-selection-nav-text);
+  color: var(--color-social-link-team-hover);
   background-color: var(--color-selection-nav-text);
 }
 
 /* логотип svg социальные сети*/
 .social-icon {
-  fill: #afb1b8;
+  fill: currentColor;
   transition: fill 250ms var(--animation-timing-function);
 }
 .social-item:hover .social-icon,
@@ -506,21 +508,16 @@ studio БЛОК Постоянные клиенты
 /* карточка-бокс где содержится логотип клиента */
 .clients-item {
   border: 1px solid var(--color-clients-logo-studio);
-  box-sizing: border-box;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 92px;
-  cursor: pointer;
-  fill: var(--color-clients-logo-studio);
-  transition: fill 250ms var(--animation-timing-function),
-    border 250ms var(--animation-timing-function);
+  transition: border 250ms var(--animation-timing-function);
 }
 .clients-item:hover,
 .clients-item:focus {
-  fill: var(--color-selection-nav-text);
   border: 1px solid var(--color-selection-nav-text);
 }
 
@@ -640,13 +637,10 @@ footer
 
   cursor: pointer;
   background-color: var(--color-footer-social-background);
-  fill: var(--color-footer-adress);
-  transition: fill 250ms var(--animation-timing-function),
-    background-color 250ms var(--animation-timing-function);
+  transition: background-color 250ms var(--animation-timing-function);
 }
 .footer-social-item:hover,
 .footer-social-item:focus {
-  fill: var(--color-selection-nav-text);
   background-color: var(--color-selection-nav-text);
 }
 
@@ -790,12 +784,14 @@ portfolio БЛОК примеры наших робот
   padding: 63px 24px;
 
   position: absolute;
-  bottom: -100%;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
   transition: transform 250ms var(--animation-timing-function);
 }
 
 .box-example:hover .product-description {
-  transform: translateY(-100%);
+  transform: translateY(0);
 }
 
 /* коробка текста описания наших работ */
@@ -867,6 +863,12 @@ portfolio БЛОК примеры наших робот
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-close-cross {
