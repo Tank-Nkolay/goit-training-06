@@ -17,6 +17,11 @@ ol {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 /* убираем нижний отступ у изображений */
 .img-corect {
   vertical-align: bottom;
@@ -49,6 +54,7 @@ ol {
   --color-line-box: #eeeeee;
   --color-footer-adress: #ffffff;
   --color-footer-social-background: rgba(255, 255, 255, 0.1);
+  --color-modal-button-submit-hover: #188ce8;
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -545,7 +551,7 @@ footer
 /* выравниваем секции адрес и соц. сети */
 .footer-horisont {
   display: flex;
-  align-items: baseline;
+  justify-content: space-between;
 }
 /* правый отступ секции адрес от секции соц. сети */
 .section-footer-address {
@@ -652,6 +658,74 @@ footer
 .footer-social-item:hover .social-icon,
 .footer-social-item:focus .social-icon {
   fill: var(--color-social-link-team-hover);
+}
+
+/* --------- футер секция подписаться на рассылку--------- */
+
+.footer-subscription {
+  display: block;
+}
+
+.footer-subscription-header {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-about-us-text);
+}
+
+.footer-subscription-box {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer-subscription-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--color-background-section-one);
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-subscription-input::placeholder {
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subscription-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--color-about-us-text);
+
+  background-color: var(--color-selection-button-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.footer-subscription-button-icon {
+  fill: var(--color-about-us-text);
+  margin-left: 10px;
 }
 
 /* --------------------- ===============================
@@ -831,6 +905,7 @@ portfolio БЛОК примеры наших робот
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--animation-timing-function),
     visibility 250ms var(--animation-timing-function);
+  z-index: 100;
 }
 
 /* анимация появления модального окна */
@@ -846,6 +921,7 @@ portfolio БЛОК примеры наших робот
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  padding: 40px;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -873,6 +949,10 @@ portfolio БЛОК примеры наших робот
 
 .modal-close-cross {
   display: flex;
+  transition: fill var(--animation-timing-function);
+}
+.modal-close-cross:hover {
+  fill: var(--color-selection-nav-text);
 }
 
 /* прячем модальное окно */
@@ -880,4 +960,167 @@ portfolio БЛОК примеры наших робот
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* заглавие модального окна */
+.modal-form-title {
+  display: flex;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.modal-form-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.modal-form-box:last-child {
+  margin-top: 20px;
+}
+
+/* текст форм ввода */
+.modal-form-tag {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+
+.modal-form-input {
+  margin-top: 4px;
+  width: 100%;
+  padding: 11px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: transparent;
+  color: var(--color-text);
+  transition: border-color var(--animation-timing-function);
+}
+.modal-form-input:hover,
+.modal-form-input:focus {
+  border-color: var(--color-selection-nav-text);
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  transition: fill var(--animation-timing-function);
+}
+.modal-form-input:hover + .modal-form-icon {
+  fill: var(--color-selection-nav-text);
+}
+
+/* форма комментарий */
+.modal-form-cooment {
+  height: 120px;
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  resize: none;
+  color: var(--color-text);
+  transition: border-color var(--animation-timing-function);
+}
+.modal-form-cooment::placeholder {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-cooment:hover,
+.modal-form-cooment:focus {
+  border-color: var(--color-selection-nav-text);
+}
+
+/* форма согласие с рассылкой  */
+
+.modal-form-box.check-center {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form-check:checked + .modal-form-check-mark {
+  border-color: transparent;
+  background-color: var(--color-selection-nav-text);
+}
+
+.visually-hidden {
+  position: absolute;
+  scale: 0;
+  opacity: 0;
+}
+
+.modal-form-check-mark {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid var(--color-main);
+  border-radius: 2px;
+  transition: border-color var(--animation-timing-function),
+    background-color var(--animation-timing-function);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form-check-icon {
+  fill: var(--color-background-main);
+}
+
+.modal-form-check-agreement {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+.modal-form-check-link {
+  text-decoration-line: underline;
+  text-underline-position: under;
+  color: var(--color-selection-button-background);
+}
+
+/* кнопка сабмита */
+.modal-form-submit-button {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 200px;
+  min-height: 50px;
+  padding: 0;
+  margin-top: 30px;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color var(--animation-timing-function);
+}
+.modal-form-submit-button:hover,
+.modal-form-submit-button:focus {
+  background-color: var(--color-modal-button-submit-hover);
 }
