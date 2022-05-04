@@ -40,6 +40,7 @@ a {
   --color-selection-nav-text: #2196f3;
   --color-selection-button-text: #ffffff;
   --color-selection-button-background: #2196f3;
+  --color-selection-button-focus: #188ce8;
   --color-social-link-team: #afb1b8;
   --color-social-link-team-hover: #ffffff;
   --color-social-link-team-background: transparent;
@@ -102,14 +103,12 @@ body {
 
 /* tab кнопок studio */
 .selection-button-studio {
-  transition: color 250ms var(--animation-timing-function),
-    background-color 250ms var(--animation-timing-function);
+  transition: background-color 250ms var(--animation-timing-function);
 }
 
 .selection-button-studio:hover,
 .selection-button-studio:focus {
-  color: var(--color-selection-button-background);
-  background-color: var(--color-selection-button-text);
+  background-color: var(--color-selection-button-focus);
 }
 
 /* ----------- контейнер ---------- */
@@ -551,7 +550,6 @@ footer
 /* выравниваем секции адрес и соц. сети */
 .footer-horisont {
   display: flex;
-  justify-content: space-between;
 }
 /* правый отступ секции адрес от секции соц. сети */
 .section-footer-address {
@@ -663,7 +661,7 @@ footer
 /* --------- футер секция подписаться на рассылку--------- */
 
 .footer-subscription {
-  display: block;
+  margin-left: auto;
 }
 
 .footer-subscription-header {
@@ -685,11 +683,13 @@ footer
   width: 358px;
   height: 50px;
   margin-right: 12px;
+  padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--color-background-section-one);
+  outline: transparent;
 
   font-size: 16px;
   line-height: 1.25;
@@ -697,7 +697,6 @@ footer
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-subscription-input::placeholder {
-  padding-left: 16px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -717,6 +716,8 @@ footer
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--color-about-us-text);
+  border: none;
+  cursor: pointer;
 
   background-color: var(--color-selection-button-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -860,7 +861,7 @@ portfolio БЛОК примеры наших робот
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--animation-timing-function);
 }
 
@@ -965,28 +966,29 @@ portfolio БЛОК примеры наших робот
 .modal-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* заглавие модального окна */
 .modal-form-title {
-  display: flex;
-  justify-content: center;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .modal-form-box {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 }
-.modal-form-box:last-child {
-  margin-top: 20px;
+
+.modal-form-box.indent {
+  margin-bottom: 20px;
 }
 
 /* текст форм ввода */
@@ -1050,6 +1052,10 @@ portfolio БЛОК примеры наших робот
 
 /* форма согласие с рассылкой  */
 
+.check-center {
+  margin-bottom: 30px;
+}
+
 .modal-form-box.check-center {
   flex-direction: row;
   align-items: center;
@@ -1100,13 +1106,9 @@ portfolio БЛОК примеры наших робот
 
 /* кнопка сабмита */
 .modal-form-submit-button {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
   width: 200px;
   min-height: 50px;
   padding: 0;
-  margin-top: 30px;
   cursor: pointer;
 
   font-weight: 700;
@@ -1118,6 +1120,7 @@ portfolio БЛОК примеры наших робот
   background-color: var(--color-selection-button-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
   transition: background-color var(--animation-timing-function);
 }
 .modal-form-submit-button:hover,
