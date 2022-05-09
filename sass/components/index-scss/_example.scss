@@ -1,0 +1,61 @@
+/* ======================================== 
+studio БЛОК чем мы занимаемся
+======================================== */
+
+/* верхний отступ */
+.wrap {
+  margin-top: 94px;
+}
+
+/* чем мы занимаемся header */
+.example__header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+/* чем мы занимаемся блок */
+.example {
+  display: flex;
+  align-items: center;
+}
+.example--indent {
+  margin-top: 50px;
+}
+
+/* размещение карточек описания что мы делаем */
+.example__list {
+  margin-left: 30px;
+  position: relative;
+  display: inline-flex;
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+/* чем мы занимаемся текст на карточке */
+.example__text {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-about-us-text);
+  background-color: var(--color-about-us-bg-color);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* убираем нижний отступ у изображений */
+.example__img {
+  vertical-align: bottom;
+}

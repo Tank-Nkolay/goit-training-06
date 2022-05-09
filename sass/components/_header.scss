@@ -1,0 +1,98 @@
+/* ----- header all ----- */
+
+/* выравнивание элементов header в линю и минимальная высота */
+.header-horizont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* линия под хедером */
+.decor {
+  border-bottom: 1px solid var(--color-line-header);
+}
+
+/* logo */
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--color-logo-main);
+  margin-right: 93px;
+}
+.logo-studio-top {
+  color: var(--color-logo-second-top);
+}
+
+/* расположение навигации */
+.nav-position {
+  margin-left: 50px;
+  display: flex;
+}
+.nav-position:first-child {
+  margin-left: 0px;
+}
+
+/* шрифты и расположение для studio, portfolio и contacts  */
+.nav-font {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+/* расположение contacts */
+
+.contacts-position {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* шрифт, выравнивание и падинги email и tel */
+.contacts-font {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms var(--animation-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--color-selection-nav-text);
+  }
+}
+
+/* отступ svg справа */
+.contacts-email-img {
+  fill: var(--color-text);
+  margin-right: 10px;
+  transition: fill 250ms var(--animation-timing-function);
+
+  .contacts-font:hover &,
+  .contacts-font:focus & {
+    fill: var(--color-selection-nav-text);
+  }
+}
+
+.contacts-tel-img {
+  fill: var(--color-text);
+  transition: fill 250ms var(--animation-timing-function);
+  margin-right: 10px;
+
+  .contacts-font:hover &,
+  .contacts-font:focus & {
+    fill: var(--color-selection-nav-text);
+  }
+}

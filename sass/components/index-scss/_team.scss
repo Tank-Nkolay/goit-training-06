@@ -1,0 +1,111 @@
+/* ======================================== 
+studio БЛОК наша команда
+======================================== */
+
+/* размещение карточек наша команда */
+.box-position {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* размещение карточек описания наша команда */
+.team-box-position {
+  margin-left: 30px;
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+/* бокс-карточка члена команды */
+.container-team {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* studio наша команда цвет секции */
+.studio-section-team {
+  background-color: var(--color-background-section-two);
+}
+
+/* studio наша команда главный заголовок */
+.team-main-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+/* studio наша команда имена команды */
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+/* текст описания и верхний отступ от заголовка */
+.text-description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  margin-top: 10px;
+}
+
+/* карточка команды */
+.ind-team-box {
+  width: 270px;
+  background-color: var(--color-background-main);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* ------- социальные сети команды ------- */
+
+/* выравниваем ссылки социальных сетей в линию и отступы */
+.social-list {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* карточка-бокс социальные сети */
+.social-item {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: var(--color-social-link-team);
+  background-color: var(--color-social-link-team-background);
+
+  transition: fill 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--color-social-link-team-hover);
+    background-color: var(--color-selection-nav-text);
+  }
+}
+
+/* логотип svg социальные сети*/
+.social-icon {
+  fill: currentColor;
+  transition: fill 250ms var(--animation-timing-function);
+  .social-item:hover &,
+  .social-item:focus & {
+    fill: var(--color-social-link-team-hover);
+  }
+}

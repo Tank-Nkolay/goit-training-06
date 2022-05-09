@@ -1,3 +1,5 @@
-{
-    "liveServer.settings.multiRootWorkspaceName": "goit-markup-hw-01"
-}
+
+  {
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active"
+} 

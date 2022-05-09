@@ -1,0 +1,45 @@
+/* ======================================== 
+studio БЛОК наши преимущества 
+======================================== */
+
+/* делаем блоки в линию */
+.benefits {
+  display: flex;
+  align-items: center;
+}
+
+/* размещение карточек описания наших преимуществ */
+.benefits__list {
+  width: 270px;
+  margin-left: 30px;
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+/* studio наши преимущества заголовки разделов */
+.benefit__slogan {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefits__box {
+  width: 270px;
+  height: 120px;
+  background-color: var(--color-background-section-two);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* текст описания и верхний отступ от заголовка */
+.benefits__description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  margin-top: 10px;
+}

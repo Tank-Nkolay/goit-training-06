@@ -1,32 +1,4 @@
-/* ------ глобальные правила ----- */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-/* убираем нижний отступ у изображений */
-.img-corect {
-  vertical-align: bottom;
-}
-
+@charset "UTF-8";
 /* ----- изменяемые цвета ----- */
 :root {
   --color-main: #212121;
@@ -59,6 +31,35 @@ a {
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ------ глобальные правила ----- */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* убираем нижний отступ у изображений */
+.img-corect {
+  vertical-align: bottom;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--color-background-main);
@@ -76,7 +77,6 @@ body {
 }
 
 /* ------ выделение ----- */
-
 /* показываем на какой мы странице */
 .link-current {
   color: var(--color-selection-nav-text);
@@ -84,6 +84,8 @@ body {
 .link-current::after {
   content: "";
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 4px;
   width: 100%;
@@ -93,22 +95,11 @@ body {
 
 /* tab навигации */
 .selection-nav {
+  -webkit-transition: color 250ms var(--animation-timing-function);
   transition: color 250ms var(--animation-timing-function);
 }
-
-.selection-nav:hover,
-.selection-nav:focus {
+.selection-nav:hover, .selection-nav:focus {
   color: var(--color-selection-nav-text);
-}
-
-/* tab кнопок studio */
-.selection-button-studio {
-  transition: background-color 250ms var(--animation-timing-function);
-}
-
-.selection-button-studio:hover,
-.selection-button-studio:focus {
-  background-color: var(--color-selection-button-focus);
 }
 
 /* ----------- контейнер ---------- */
@@ -120,14 +111,26 @@ body {
   margin-right: auto;
 }
 
-/* ----- header all ----- */
+/* глобальные параметры секций */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
+/* ----- header all ----- */
 /* выравнивание элементов header в линю и минимальная высота */
 .header-horizont {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 /* линия под хедером */
 .decor {
   border-bottom: 1px solid var(--color-line-header);
@@ -143,6 +146,7 @@ body {
   color: var(--color-logo-main);
   margin-right: 93px;
 }
+
 .logo-studio-top {
   color: var(--color-logo-second-top);
 }
@@ -150,8 +154,11 @@ body {
 /* расположение навигации */
 .nav-position {
   margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .nav-position:first-child {
   margin-left: 0px;
 }
@@ -167,11 +174,14 @@ body {
 }
 
 /* расположение contacts */
-
 .contacts-position {
   margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .contacts-position:last-child {
   margin-right: 0;
@@ -183,60 +193,46 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-text);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  -webkit-transition: color 250ms var(--animation-timing-function);
   transition: color 250ms var(--animation-timing-function);
 }
-
-/* выделение email и tel */
-.contacts-font:hover,
-.contacts-font:focus {
+.contacts-font:hover, .contacts-font:focus {
   color: var(--color-selection-nav-text);
-}
-.contacts-font:hover .contacts-email-img,
-.contacts-font:focus .contacts-email-img {
-  fill: var(--color-selection-nav-text);
-}
-.contacts-font:hover .contacts-tel-img,
-.contacts-font:focus .contacts-tel-img {
-  fill: var(--color-selection-nav-text);
 }
 
 /* отступ svg справа */
 .contacts-email-img {
   fill: var(--color-text);
   margin-right: 10px;
+  -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
 }
+.contacts-font:hover .contacts-email-img, .contacts-font:focus .contacts-email-img {
+  fill: var(--color-selection-nav-text);
+}
+
 .contacts-tel-img {
   fill: var(--color-text);
+  -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
   margin-right: 10px;
 }
-
-/* -------------- main studio --------------- */
-
-/* глобальные параметры секций */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-/* текст описания для всего studio и верхний отступ от заголовка */
-.text-description {
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-  margin-top: 10px;
+.contacts-font:hover .contacts-tel-img, .contacts-font:focus .contacts-tel-img {
+  fill: var(--color-selection-nav-text);
 }
 
 /* ======================================== 
 studio ГЕРОЙ секция 
 ======================================== */
-
-.studio-section-hero {
+.hero {
   background-color: var(--color-background-section-one);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -244,30 +240,25 @@ studio ГЕРОЙ секция
 }
 
 /* background картинка hero */
-.hero-background-img {
+.hero--img {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      to right,
-      var(--color-hero-shadow),
-      var(--color-hero-shadow)
-    ),
-    url(../images/images-index/hero-background.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-background.jpg);
+  background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-background.jpg);
   background-position: center;
   background-size: cover;
 }
 
 /* studio ГЕРОЙ заглавие */
-.studio-hero-header {
+.hero__header {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-hero-header);
-
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -275,19 +266,18 @@ studio ГЕРОЙ секция
 }
 
 /* ===== studio ГЕРОЙ кнопка ===== */
-.button-main-studio {
+.button {
   font-family: inherit;
   color: var(--color-selection-button-text);
   background-color: var(--color-selection-button-background);
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
-
   width: 200px;
   min-height: 50px;
   border: 0;
@@ -295,77 +285,80 @@ studio ГЕРОЙ секция
   min-height: 50px;
 }
 
-/* ----- другие секции студио ----- */
-
-/* ----- глобальные настройки для секций студио ----- */
-
-/* делаем блоки в линию */
-.items-horizont {
-  display: flex;
-  align-items: center;
+/* tab кнопки studio */
+.button--selection {
+  -webkit-transition: background-color 250ms var(--animation-timing-function);
+  transition: background-color 250ms var(--animation-timing-function);
 }
-
-/* размещение карточек чем мы занимаемся и наша команда */
-.box-position {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
+.button--selection:hover, .button--selection:focus {
+  background-color: var(--color-selection-button-focus);
 }
 
 /* ======================================== 
 studio БЛОК наши преимущества 
 ======================================== */
+/* делаем блоки в линию */
+.benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 /* размещение карточек описания наших преимуществ */
-.benefit-list {
+.benefits__list {
   width: 270px;
   margin-left: 30px;
 }
-.benefit-list:first-child {
+.benefits__list:first-child {
   margin-left: 0px;
 }
 
 /* studio наши преимущества заголовки разделов */
-.benefit-slogan {
+.benefit__slogan {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-/*  */
-.benefit-box {
+.benefits__box {
   width: 270px;
   height: 120px;
   background-color: var(--color-background-section-two);
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 30px;
+}
+
+/* текст описания и верхний отступ от заголовка */
+.benefits__description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  margin-top: 10px;
 }
 
 /* ======================================== 
 studio БЛОК чем мы занимаемся
 ======================================== */
-
 /* верхний отступ */
 .wrap {
   margin-top: 94px;
 }
 
-/* размещение карточек описания что мы делаем */
-.work-list {
-  margin-left: 30px;
-  position: relative;
-  display: inline-flex;
-}
-.work-list:first-child {
-  margin-left: 0px;
-}
-
 /* чем мы занимаемся header */
-.about-us-header {
+.example__header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -373,29 +366,74 @@ studio БЛОК чем мы занимаемся
   text-align: center;
 }
 
+/* чем мы занимаемся блок */
+.example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.example--indent {
+  margin-top: 50px;
+}
+
+/* размещение карточек описания что мы делаем */
+.example__list {
+  margin-left: 30px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.example__list:first-child {
+  margin-left: 0px;
+}
+
 /* чем мы занимаемся текст на карточке */
-.about-us-text {
+.example__text {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--color-about-us-text);
   background-color: var(--color-about-us-bg-color);
-
   position: absolute;
   left: 0;
   bottom: 0;
   width: 370px;
   height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* убираем нижний отступ у изображений */
+.example__img {
+  vertical-align: bottom;
 }
 
 /* ======================================== 
 studio БЛОК наша команда
 ======================================== */
+/* размещение карточек наша команда */
+.box-position {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 /* размещение карточек описания наша команда */
 .team-box-position {
@@ -410,8 +448,8 @@ studio БЛОК наша команда
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -437,44 +475,62 @@ studio БЛОК наша команда
   letter-spacing: 0.03em;
 }
 
+/* текст описания и верхний отступ от заголовка */
+.text-description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  margin-top: 10px;
+}
+
 /* карточка команды */
 .ind-team-box {
   width: 270px;
   background-color: var(--color-background-main);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 /* ------- социальные сети команды ------- */
-
 /* выравниваем ссылки социальных сетей в линию и отступы */
 .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 16px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
 }
+
 /* карточка-бокс социальные сети */
 .social-item {
   width: 44px;
   height: 44px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   color: var(--color-social-link-team);
   background-color: var(--color-social-link-team-background);
-
-  transition: fill 250ms var(--animation-timing-function),
-    background-color 250ms var(--animation-timing-function);
+  -webkit-transition: fill 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function);
+  transition: fill 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function);
 }
-.social-item:hover,
-.social-item:focus {
+.social-item:hover, .social-item:focus {
   color: var(--color-social-link-team-hover);
   background-color: var(--color-selection-nav-text);
 }
@@ -482,17 +538,16 @@ studio БЛОК наша команда
 /* логотип svg социальные сети*/
 .social-icon {
   fill: currentColor;
+  -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
 }
-.social-item:hover .social-icon,
-.social-item:focus .social-icon {
+.social-item:hover .social-icon, .social-item:focus .social-icon {
   fill: var(--color-social-link-team-hover);
 }
 
 /* ======================================== 
 studio БЛОК Постоянные клиенты 
 ======================================== */
-
 /* header постоянные клиенты */
 .clients-header {
   font-weight: 700;
@@ -506,40 +561,50 @@ studio БЛОК Постоянные клиенты
 /* список наших клиентов */
 /* выравниваем карточки наших клиентов в линию */
 .clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 }
+
 /* карточка-бокс где содержится логотип клиента */
 .clients-item {
   border: 1px solid var(--color-clients-logo-studio);
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 170px;
   height: 92px;
+  -webkit-transition: border 250ms var(--animation-timing-function);
   transition: border 250ms var(--animation-timing-function);
 }
-.clients-item:hover,
-.clients-item:focus {
+.clients-item:hover, .clients-item:focus {
   border: 1px solid var(--color-selection-nav-text);
 }
 
 /* логотип svg компании клиента */
 .clients-icon {
+  -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
   fill: #afb1b8;
 }
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon {
+.clients-item:hover .clients-icon, .clients-item:focus .clients-icon {
   fill: var(--color-selection-nav-text);
 }
 
 /* ---------- ========================================
 footer 
 ---------- =========================================== */
-
 /* футер секция */
 .footer-section {
   background-color: var(--color-background-section-one);
@@ -549,15 +614,17 @@ footer
 
 /* выравниваем секции адрес и соц. сети */
 .footer-horisont {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 /* правый отступ секции адрес от секции соц. сети */
 .section-footer-address {
   margin-right: 70px;
 }
 
 /* --------- футер секция логотип и адрес  --------- */
-
 /* нижний отступ от логотипа */
 .logo-footer {
   margin-bottom: 20px;
@@ -583,6 +650,7 @@ footer
 .address-position {
   margin-top: 9px;
 }
+
 .address-position:first-child {
   margin-top: 0px;
 }
@@ -610,7 +678,6 @@ footer
 }
 
 /* --------- футер секция присойдиняйтесь и соц. сети --------- */
-
 /* футер header - присоединяйтесь */
 .footer-social-header {
   font-weight: 700;
@@ -624,42 +691,52 @@ footer
 
 /* выравниваем ссылки социальных сетей в линию и отступы */
 .footer-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 16px;
   gap: 10px;
 }
+
 /* карточка-бокс социальные сети */
 .footer-social-item {
   width: 44px;
   height: 44px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   background-color: var(--color-footer-social-background);
+  -webkit-transition: background-color 250ms var(--animation-timing-function);
   transition: background-color 250ms var(--animation-timing-function);
 }
-.footer-social-item:hover,
-.footer-social-item:focus {
+.footer-social-item:hover, .footer-social-item:focus {
   background-color: var(--color-selection-nav-text);
 }
 
 /* логотип svg социальные сети*/
 .footer-social-icon {
   fill: var(--color-footer-adress);
+  -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
 }
-.footer-social-item:hover .social-icon,
-.footer-social-item:focus .social-icon {
+.footer-social-item:hover .footer-social-icon, .footer-social-item:focus .footer-social-icon {
   fill: var(--color-social-link-team-hover);
 }
 
 /* --------- футер секция подписаться на рассылку--------- */
-
 .footer-subscription {
   margin-left: auto;
 }
@@ -676,6 +753,8 @@ footer
 
 .footer-subscription-box {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -685,12 +764,37 @@ footer
   margin-right: 12px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--color-background-section-one);
   outline: transparent;
-
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-subscription-input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-subscription-input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-subscription-input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-subscription-input::-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -704,13 +808,18 @@ footer
 }
 
 .footer-subscription-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 200px;
   height: 50px;
   padding: 0;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -718,9 +827,9 @@ footer
   color: var(--color-about-us-text);
   border: none;
   cursor: pointer;
-
   background-color: var(--color-selection-button-background);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
@@ -729,25 +838,29 @@ footer
   margin-left: 10px;
 }
 
-/* --------------------- ===============================
-portfolio 
------------------------- ================================== */
-
 /* техническое заглавие */
 .portfolio-hero {
   color: var(--color-technical-text);
 }
+
 /* ----- portfolio кнопки ----- */
 /* делаем кнопки портфолио в линию и расположение */
 .button-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button-position {
   margin-left: 8px;
 }
+
 .button-position:first-child {
   margin-left: 0px;
 }
@@ -764,11 +877,10 @@ portfolio
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   cursor: pointer;
-
   max-width: 150px;
   min-height: 38px;
   border: 0;
@@ -786,7 +898,6 @@ portfolio
   letter-spacing: 0.03em;
   border-radius: 4px;
   cursor: pointer;
-
   max-width: 150px;
   min-height: 38px;
   border: 0;
@@ -795,39 +906,36 @@ portfolio
 
 /* tab кнопок portfolio */
 .selection-button-portfolio {
-  transition: color 250ms var(--animation-timing-function),
-    background-color 250ms var(--animation-timing-function),
-    box-shadow 250ms var(--animation-timing-function);
+  -webkit-transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), box-shadow 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), box-shadow 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
 }
-.selection-button-portfolio:hover,
-.selection-button-portfolio:focus {
+.selection-button-portfolio:hover, .selection-button-portfolio:focus {
   color: var(--color-selection-button-text);
   background-color: var(--color-selection-button-background);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ======================================== 
 portfolio БЛОК примеры наших робот
 ======================================== */
-
 /* делаем примеры наших работ в линию */
 .product-horisont {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* верхний маржин секции примеры наших работ */
 .product-position {
   margin-top: 50px;
-}
-/* отступы коробок на странице */
-.box-example:nth-child(3n + 1) {
-  margin-left: 0px;
-}
-.box-example:nth-child(-n + 3) {
-  margin-top: 0px;
 }
 
 /* портфолио примеры робот в коробке */
@@ -836,12 +944,20 @@ portfolio БЛОК примеры наших робот
   margin-left: 30px;
   margin-top: 30px;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 250ms var(--animation-timing-function);
+  transition: -webkit-box-shadow 250ms var(--animation-timing-function);
   transition: box-shadow 250ms var(--animation-timing-function);
+  transition: box-shadow 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
 }
-.box-example:hover,
-.box-example:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.box-example:nth-child(3n+1) {
+  margin-left: 0px;
+}
+.box-example:nth-child(-n+3) {
+  margin-top: 0px;
+}
+.box-example:hover, .box-example:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* портфолио overlay над карточкой - примеры робот */
@@ -857,16 +973,19 @@ portfolio БЛОК примеры наших робот
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
-
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(101%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform 250ms var(--animation-timing-function);
+  transition: -webkit-transform 250ms var(--animation-timing-function);
   transition: transform 250ms var(--animation-timing-function);
+  transition: transform 250ms var(--animation-timing-function), -webkit-transform 250ms var(--animation-timing-function);
 }
-
 .box-example:hover .product-description {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* коробка текста описания наших работ */
@@ -896,7 +1015,6 @@ portfolio БЛОК примеры наших робот
 /* ---------- ========================================
 модальное окно
 ---------- =========================================== */
-
 /* оверлей модального окна */
 .backdrop {
   position: fixed;
@@ -904,14 +1022,15 @@ portfolio БЛОК примеры наших робот
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms var(--animation-timing-function),
-    visibility 250ms var(--animation-timing-function);
+  -webkit-transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--animation-timing-function);
+  transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--animation-timing-function);
   z-index: 100;
 }
 
 /* анимация появления модального окна */
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* само модальное окно */
@@ -921,12 +1040,12 @@ portfolio БЛОК примеры наших робот
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   padding: 40px;
-
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -940,16 +1059,24 @@ portfolio БЛОК примеры наших робот
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-
   cursor: pointer;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-close-cross {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: fill var(--animation-timing-function);
   transition: fill var(--animation-timing-function);
 }
 .modal-close-cross:hover {
@@ -964,9 +1091,16 @@ portfolio БЛОК примеры наших робот
 }
 
 .modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* заглавие модального окна */
@@ -981,8 +1115,13 @@ portfolio БЛОК примеры наших робот
 
 .modal-form-box {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -1003,16 +1142,16 @@ portfolio БЛОК примеры наших робот
   margin-top: 4px;
   width: 100%;
   padding: 11px 42px;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 4px;
   outline: transparent;
   color: var(--color-text);
+  -webkit-transition: border-color var(--animation-timing-function);
   transition: border-color var(--animation-timing-function);
 }
-.modal-form-input:hover,
-.modal-form-input:focus {
+.modal-form-input:hover, .modal-form-input:focus {
   border-color: var(--color-selection-nav-text);
 }
 
@@ -1020,6 +1159,7 @@ portfolio БЛОК примеры наших робот
   position: absolute;
   left: 12px;
   bottom: 11px;
+  -webkit-transition: fill var(--animation-timing-function);
   transition: fill var(--animation-timing-function);
 }
 .modal-form-input:hover + .modal-form-icon {
@@ -1037,29 +1177,54 @@ portfolio БЛОК примеры наших робот
   outline: transparent;
   resize: none;
   color: var(--color-text);
+  -webkit-transition: border-color var(--animation-timing-function);
   transition: border-color var(--animation-timing-function);
+}
+.modal-form-cooment::-webkit-input-placeholder {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-cooment::-moz-placeholder {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-cooment:-ms-input-placeholder {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-cooment::-ms-input-placeholder {
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-cooment::placeholder {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.modal-form-cooment:hover,
-.modal-form-cooment:focus {
+.modal-form-cooment:hover, .modal-form-cooment:focus {
   border-color: var(--color-selection-nav-text);
 }
 
 /* форма согласие с рассылкой  */
-
 .check-center {
   margin-bottom: 30px;
 }
 
 .modal-form-box.check-center {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal-form-check:checked + .modal-form-check-mark {
@@ -1077,15 +1242,19 @@ portfolio БЛОК примеры наших робот
   width: 16px;
   height: 15px;
   margin-right: 8px;
-
   border: 2px solid var(--color-main);
   border-radius: 2px;
-  transition: border-color var(--animation-timing-function),
-    background-color var(--animation-timing-function);
-
+  -webkit-transition: border-color var(--animation-timing-function), background-color var(--animation-timing-function);
+  transition: border-color var(--animation-timing-function), background-color var(--animation-timing-function);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .modal-form-check-icon {
@@ -1099,7 +1268,8 @@ portfolio БЛОК примеры наших робот
 }
 
 .modal-form-check-link {
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   text-underline-position: under;
   color: var(--color-selection-button-background);
 }
@@ -1110,20 +1280,19 @@ portfolio БЛОК примеры наших робот
   min-height: 50px;
   padding: 0;
   cursor: pointer;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
   color: var(--color-selection-button-text);
   background-color: var(--color-selection-button-background);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  -webkit-transition: background-color var(--animation-timing-function);
   transition: background-color var(--animation-timing-function);
 }
-.modal-form-submit-button:hover,
-.modal-form-submit-button:focus {
+.modal-form-submit-button:hover, .modal-form-submit-button:focus {
   background-color: var(--color-modal-button-submit-hover);
-}
+}/*# sourceMappingURL=main.css.map */
