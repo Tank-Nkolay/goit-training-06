@@ -4,66 +4,66 @@ studio БЛОК наша команда
 
 /* размещение карточек наша команда */
 .box-position {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
+  // margin-top: 50px;
+  // display: flex;
+  // align-items: center;
 }
 
 /* размещение карточек описания наша команда */
 .team-box-position {
-  margin-left: 30px;
-  &:first-child {
-    margin-left: 0px;
+  // margin-left: 30px;
+  // &:first-child {
+  //   margin-left: 0px;
   }
 }
 
 /* бокс-карточка члена команды */
 .container-team {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  // text-align: center;
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  //   0px 2px 1px rgba(0, 0, 0, 0.2);
+  // border-radius: 0px 0px 4px 4px;
 }
 
 /* studio наша команда цвет секции */
-.studio-section-team {
-  background-color: var(--color-background-section-two);
+// .studio-section-team {
+//   background-color: var(--color-background-section-two);
 }
 
 /* studio наша команда главный заголовок */
 .team-main-header {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.17;
+  // letter-spacing: 0.03em;
+  // text-align: center;
 }
 
 /* studio наша команда имена команды */
 .team-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 1.19;
+  // letter-spacing: 0.03em;
 }
 
 /* текст описания и верхний отступ от заголовка */
 .text-description {
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-  margin-top: 10px;
+  // line-height: 1.71;
+  // letter-spacing: 0.03em;
+  // color: var(--color-text);
+  // margin-top: 10px;
 }
 
 /* карточка команды */
 .ind-team-box {
-  width: 270px;
-  background-color: var(--color-background-main);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  // width: 270px;
+  // background-color: var(--color-background-main);
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  //   0px 2px 1px rgba(0, 0, 0, 0.2);
+  // border-radius: 0px 0px 4px 4px;
 }
 
 /* ------- социальные сети команды ------- */

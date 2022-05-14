@@ -4,43 +4,43 @@ studio БЛОК Постоянные клиенты
 
 /* header постоянные клиенты */
 .clients-header {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.17;
+  // text-align: center;
+  // letter-spacing: 0.03em;
+  // margin-bottom: 50px;
 }
 
 /* список наших клиентов */
 /* выравниваем карточки наших клиентов в линию */
 .clients-list {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  // display: flex;
+  // align-items: center;
+  // gap: 30px;
 }
 /* карточка-бокс где содержится логотип клиента */
 .clients-item {
-  border: 1px solid var(--color-clients-logo-studio);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 92px;
-  transition: border 250ms var(--animation-timing-function);
-  &:hover,
-  &:focus {
-    border: 1px solid var(--color-selection-nav-text);
-  }
+  // border: 1px solid var(--color-clients-logo-studio);
+  // border-radius: 4px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // width: 170px;
+  // height: 92px;
+  // transition: border 250ms var(--animation-timing-function);
+  // &:hover,
+  // &:focus {
+  //   border: 1px solid var(--color-selection-nav-text);
+  // }
 }
 
 /* логотип svg компании клиента */
 .clients-icon {
-  transition: fill 250ms var(--animation-timing-function);
-  fill: #afb1b8;
-  .clients-item:hover &,
-  .clients-item:focus & {
-    fill: var(--color-selection-nav-text);
-  }
+  // transition: fill 250ms var(--animation-timing-function);
+  // fill: #afb1b8;
+  // .clients-item:hover &,
+  // .clients-item:focus & {
+  //   fill: var(--color-selection-nav-text);
+  // }
 }
