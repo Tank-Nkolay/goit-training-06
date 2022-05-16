@@ -7,6 +7,11 @@ studio ГЕРОЙ секция
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 /* background картинка hero */
@@ -23,6 +28,10 @@ studio ГЕРОЙ секция
     url(../images/images-index/hero-background.jpg);
   background-position: center;
   background-size: cover;
+
+  @media screen and (max-width: 1199px) {
+    height: 400px;
+  }
 }
 
 /* studio ГЕРОЙ заглавие */
@@ -38,6 +47,17 @@ studio ГЕРОЙ секция
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 1199px) {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: 20px;
+    line-height: 1.62;
+  }
 }
 
 /* ===== studio ГЕРОЙ кнопка ===== */

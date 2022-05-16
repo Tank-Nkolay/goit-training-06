@@ -10,6 +10,12 @@ studio БЛОК Постоянные клиенты
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
 }
 
 /* список наших клиентов */
@@ -17,7 +23,12 @@ studio БЛОК Постоянные клиенты
 .clients-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 /* карточка-бокс где содержится логотип клиента */
 .clients-item {
@@ -32,6 +43,14 @@ studio БЛОК Постоянные клиенты
   &:hover,
   &:focus {
     border: 1px solid var(--color-selection-nav-text);
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 210px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    width: 226px;
   }
 }
 

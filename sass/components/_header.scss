@@ -1,18 +1,40 @@
 /* ----- header all ----- */
 
 /* выравнивание элементов header в линю и минимальная высота */
-.header-horizont {
+
+.header {
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.header-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+.header-nav-mobile {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 /* линия под хедером */
 .decor {
   border-bottom: 1px solid var(--color-line-header);
 }
 
 /* logo */
-.logo {
+.logo-header {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -20,7 +42,12 @@
   letter-spacing: 0.03em;
   color: var(--color-logo-main);
   margin-right: 93px;
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 88px;
+  }
 }
+
 .logo-studio-top {
   color: var(--color-logo-second-top);
 }
@@ -39,20 +66,44 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 /* расположение contacts */
 
-.contacts-position {
-  margin-right: 50px;
-  display: flex;
-  align-items: center;
+.header-contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
 
-  &:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contacts-position {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -64,9 +115,13 @@
   color: var(--color-text);
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   transition: color 250ms var(--animation-timing-function);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   &:hover,
   &:focus {
@@ -75,21 +130,10 @@
 }
 
 /* отступ svg справа */
-.contacts-email-img {
+.contacts-icon {
   fill: var(--color-text);
   margin-right: 10px;
   transition: fill 250ms var(--animation-timing-function);
-
-  .contacts-font:hover &,
-  .contacts-font:focus & {
-    fill: var(--color-selection-nav-text);
-  }
-}
-
-.contacts-tel-img {
-  fill: var(--color-text);
-  transition: fill 250ms var(--animation-timing-function);
-  margin-right: 10px;
 
   .contacts-font:hover &,
   .contacts-font:focus & {

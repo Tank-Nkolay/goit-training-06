@@ -11,7 +11,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--animation-timing-function),
     visibility 250ms var(--animation-timing-function);
-  z-index: 100;
+  z-index: 110;
 }
 
 /* анимация появления модального окна */
@@ -33,6 +33,15 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* кнопка закрытия модального окна */
@@ -60,7 +69,6 @@
     fill: var(--color-selection-nav-text);
   }
 }
-
 
 /* прячем модальное окно */
 .is-hidden {
@@ -117,12 +125,11 @@
   color: var(--color-text);
   transition: border-color var(--animation-timing-function);
 
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     border-color: var(--color-selection-nav-text);
   }
 }
-
 
 .modal-form-icon {
   position: absolute;
@@ -130,7 +137,7 @@
   bottom: 11px;
   transition: fill var(--animation-timing-function);
 
-  .modal-form-input:hover + &{
+  .modal-form-input:hover + & {
     fill: var(--color-selection-nav-text);
   }
 }
@@ -148,20 +155,17 @@
   color: var(--color-text);
   transition: border-color var(--animation-timing-function);
 
-    &::placeholder {
+  &::placeholder {
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
 
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     border-color: var(--color-selection-nav-text);
   }
-
 }
-
-
 
 /* форма согласие с рассылкой  */
 
@@ -209,6 +213,10 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-text);
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
 }
 
 .modal-form-check-link {
@@ -238,7 +246,6 @@
 
   &:hover,
   &:focus {
-  background-color: var(--color-modal-button-submit-hover);
+    background-color: var(--color-modal-button-submit-hover);
+  }
 }
-}
-

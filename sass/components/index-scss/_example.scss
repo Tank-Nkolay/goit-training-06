@@ -5,6 +5,10 @@ studio БЛОК чем мы занимаемся
 /* верхний отступ */
 .wrap {
   margin-top: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 /* чем мы занимаемся header */

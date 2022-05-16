@@ -4,29 +4,45 @@ studio БЛОК наши преимущества
 
 /* делаем блоки в линию */
 .benefits {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 /* размещение карточек описания наших преимуществ */
 .benefits__list {
-  width: 270px;
-  margin-left: 30px;
-  &:first-child {
-    margin-left: 0px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: 270px;
   }
 }
 
 /* studio наши преимущества заголовки разделов */
-.benefit__slogan {
+.benefits__slogan {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .benefits__box {
-  width: 270px;
   height: 120px;
   background-color: var(--color-background-section-two);
   border-radius: 4px;

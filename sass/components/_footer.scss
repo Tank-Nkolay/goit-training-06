@@ -10,19 +10,49 @@ footer
 }
 
 /* выравниваем секции адрес и соц. сети */
-.footer-horisont {
-  display: flex;
+.footer-box {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
+.footer-wrap {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: space-between;
+    margin-left: 61px;
+    margin-right: 74px;
+  }
+}
+
 /* правый отступ секции адрес от секции соц. сети */
 .section-footer-address {
-  margin-right: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 /* --------- футер секция логотип и адрес  --------- */
-
-/* нижний отступ от логотипа */
 .logo-footer {
-  margin-bottom: 20px;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--color-logo-main);
 }
 
 /* цвет нижнего логотипа */
@@ -44,9 +74,16 @@ footer
 /* расположение нижнего адреса и контактов */
 .address-position {
   margin-top: 9px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 8px;
+  }
 }
+
 .address-position:first-child {
   margin-top: 0px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 0px;
+  }
 }
 
 /* нижний адрес */
@@ -82,12 +119,22 @@ footer
   text-transform: uppercase;
   color: var(--color-footer-adress);
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 /* выравниваем ссылки социальных сетей в линию и отступы */
 .footer-social-list {
   display: flex;
   align-items: center;
+
+  justify-content: center;
+
   margin-top: 16px;
   gap: 10px;
 }
@@ -123,7 +170,13 @@ footer
 /* --------- футер секция подписаться на рассылку--------- */
 
 .footer-subscription {
-  margin-left: auto;
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .footer-subscription-header {
@@ -134,11 +187,18 @@ footer
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-about-us-text);
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
 }
 
 .footer-subscription-box {
-  margin-top: 20px;
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
 .footer-subscription-input {
@@ -164,12 +224,22 @@ footer
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (max-width: 479px) {
+    max-width: 290px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    width: 450px;
+  }
 }
 
 .footer-subscription-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   height: 50px;
   padding: 0;
@@ -185,6 +255,10 @@ footer
   background-color: var(--color-selection-button-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+  }
 }
 
 .footer-subscription-button-icon {

@@ -7,13 +7,16 @@ studio БЛОК наша команда
   margin-top: 50px;
   display: flex;
   align-items: center;
-}
+  justify-content: center;
+  gap: 30px;
 
-/* размещение карточек описания наша команда */
-.team-box-position {
-  margin-left: 30px;
-  &:first-child {
-    margin-left: 0px;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin-top: 30px;
   }
 }
 
@@ -25,6 +28,10 @@ studio БЛОК наша команда
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 24px;
+  }
 }
 
 /* studio наша команда цвет секции */
@@ -39,6 +46,11 @@ studio БЛОК наша команда
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+    line-height: 1.79;
+  }
 }
 
 /* studio наша команда имена команды */
@@ -58,12 +70,33 @@ studio БЛОК наша команда
 }
 
 /* карточка команды */
-.ind-team-box {
-  width: 270px;
+.team-box {
   background-color: var(--color-background-main);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team-img {
+  width: 270px;
+  height: 260px;
+
+  @media screen and (width: 480px) {
+    width: 450px;
+    height: 460px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1199px) {
+    width: 354px;
+    height: 374px;
+  }
 }
 
 /* ------- социальные сети команды ------- */
