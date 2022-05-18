@@ -28,6 +28,7 @@
   --color-footer-adress: #ffffff;
   --color-footer-social-background: rgba(255, 255, 255, 0.1);
   --color-modal-button-submit-hover: #188ce8;
+  --color-mobile-menu-link: #2196f3;
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -113,7 +114,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid red;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -140,6 +140,9 @@ body {
 
 /* ----- header all ----- */
 /* выравнивание элементов header в линю и минимальная высота */
+.header {
+  border-bottom: 1px solid var(--color-line-header);
+}
 @media screen and (max-width: 767px) {
   .header {
     padding-top: 10px;
@@ -445,7 +448,7 @@ body {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196f3;
+  color: var(--color-mobile-menu-link);
 }
 .mobile-menu-item:not(:last-child) .mobile-menu-link {
   padding-right: 10px;
@@ -474,14 +477,44 @@ studio ГЕРОЙ секция
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-background.jpg);
-  background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-background.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-mob-1x.jpg);
+  background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-mob-1x.jpg);
   background-position: center;
   background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero--img {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-mob-2x.jpg);
+    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-mob-2x.jpg);
+  }
 }
 @media screen and (max-width: 1199px) {
   .hero--img {
     height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero--img {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-tab-1x.jpg);
+    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-tab-1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .hero--img {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-tab-2x.jpg);
+    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-tab-2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero--img {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-desk-1x.jpg);
+    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-desk-1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero--img {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-desk-2x.jpg);
+    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-desk-2x.jpg);
   }
 }
 
@@ -795,18 +828,15 @@ studio БЛОК наша команда
 
 .team-img {
   width: 270px;
-  height: 260px;
 }
 @media screen and (width: 480px) {
   .team-img {
     width: 450px;
-    height: 460px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1199px) {
   .team-img {
     width: 354px;
-    height: 374px;
   }
 }
 
@@ -1295,16 +1325,39 @@ footer
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .button-line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button-line {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .button-position {
   margin-left: 8px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .button-position {
+    margin-top: 15px;
+  }
+  .button-position:nth-child(4) {
+    margin-left: 0;
+  }
+  .button-position:nth-child(-n+3) {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  .button-position {
+    margin-top: 15px;
+  }
 }
 
 .button-position:first-child {
@@ -1368,42 +1421,95 @@ footer
 portfolio БЛОК примеры наших робот
 ======================================== */
 /* делаем примеры наших работ в линию */
-.product-horisont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .product-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 /* верхний маржин секции примеры наших работ */
-.product-position {
-  margin-top: 50px;
+@media screen and (min-width: 1200px) {
+  .product-position {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .product-position {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .product-position {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .product-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /* портфолио примеры робот в коробке */
 .box-example {
-  width: 370px;
-  margin-left: 30px;
-  margin-top: 30px;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow 250ms var(--animation-timing-function);
   transition: -webkit-box-shadow 250ms var(--animation-timing-function);
   transition: box-shadow 250ms var(--animation-timing-function);
   transition: box-shadow 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
 }
-.box-example:nth-child(3n+1) {
-  margin-left: 0px;
-}
-.box-example:nth-child(-n+3) {
-  margin-top: 0px;
-}
 .box-example:hover, .box-example:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (max-width: 767px) {
+  .box-example {
+    margin-top: 30px;
+  }
+  .box-example:first-child {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  .box-example {
+    width: 290px;
+  }
+}
+
+.product-img {
+  vertical-align: bottom;
+  width: 290px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .product-img {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .product-img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-img {
+    width: 370px;
+  }
 }
 
 /* портфолио overlay над карточкой - примеры робот */
@@ -1416,9 +1522,8 @@ portfolio БЛОК примеры наших робот
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--color-hero-header);
   background-color: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1428,10 +1533,41 @@ portfolio БЛОК примеры наших робот
   transition: -webkit-transform 250ms var(--animation-timing-function);
   transition: transform 250ms var(--animation-timing-function);
   transition: transform 250ms var(--animation-timing-function), -webkit-transform 250ms var(--animation-timing-function);
+  height: 294px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 .box-example:hover .product-description {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+@media screen and (max-width: 479px) {
+  .product-description {
+    width: 290px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .product-description {
+    width: 450px;
+    padding-top: 77px;
+    padding-bottom: 77px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .product-description {
+    width: 354px;
+    padding-top: 49px;
+    padding-bottom: 77px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-description {
+    width: 370px;
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 }
 
 /* коробка текста описания наших работ */
@@ -1439,6 +1575,11 @@ portfolio БЛОК примеры наших робот
   padding: 20px 24px;
   border: 1px solid var(--color-line-box);
   border-top: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .box-description {
+    width: 354px;
+  }
 }
 
 /* портфолио заголовок примера */
@@ -1582,6 +1723,11 @@ portfolio БЛОК примеры наших робот
           flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
+  -webkit-transition: color var(--animation-timing-function);
+  transition: color var(--animation-timing-function);
+}
+.modal-form-box:hover {
+  color: var(--color-selection-nav-text);
 }
 
 .modal-form-box.indent {
@@ -1594,6 +1740,11 @@ portfolio БЛОК примеры наших робот
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--color-text);
+}
+@media screen and (max-width: 1199px) {
+  .modal-form-tag {
+    color: currentColor;
+  }
 }
 
 .modal-form-input {

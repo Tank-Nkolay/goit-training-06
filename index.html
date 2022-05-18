@@ -126,7 +126,6 @@
             </div>
           </div>
         </nav>
-
         <ul class="header-contacts">
           <li class="contacts-position">
             <a class="contacts-font link" href="mailto:info@devstudio.com"
@@ -223,34 +222,58 @@
           <div class="wrap">
             <h2 class="example__header">Чем мы занимаемся</h2>
             <ul class="example example--indent">
+              <!-- пример 1 -->
               <li class="example__list">
-                <img
-                  class="example__img"
-                  src="./images/images-index/programer-works-on-tablet-a.jpg"
-                  alt="програмист работает на планшете"
-                  mwidth="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/images-index/programer-works-on-tablet-a-desk.jpg    1x,
+                      ./images/images-index/programer-works-on-tablet-a-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="example__img"
+                    src="./images/images-index/programer-works-on-tablet-a-desk.jpg"
+                    alt="програмист работает на планшете"
+                  />
+                </picture>
                 <p class="example__text">Десктопные приложения</p>
+                <!-- пример 2 -->
               </li>
               <li class="example__list">
-                <img
-                  class="example__img"
-                  src="./images/images-index/programer-works-on-laptop-b.jpg"
-                  alt="програмист работает на ноутбук"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/images-index/programer-works-on-laptop-b-desk.jpg    1x,
+                      ./images/images-index/programer-works-on-laptop-b-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="example__img"
+                    src="./images/images-index/programer-works-on-laptop-b-desk.jpg"
+                    alt="програмист работает на ноутбук"
+                  />
+                </picture>
                 <p class="example__text">Мобильные приложения</p>
               </li>
+              <!-- пример 3 -->
               <li class="example__list">
-                <img
-                  class="example__img"
-                  src="./images/images-index/designer-works-with-color-c.jpg"
-                  alt="веб-дизайнер работает с цветами"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/images-index/designer-works-with-color-c-desk.jpg    1x,
+                      ./images/images-index/designer-works-with-color-c-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="example__img"
+                    src="./images/images-index/designer-works-with-color-c-desk.jpg"
+                    alt="веб-дизайнер работает с цветами"
+                  />
+                </picture>
                 <p class="example__text">Дизайнерские решения</p>
               </li>
             </ul>
@@ -265,11 +288,34 @@
           <ul class="box-position">
             <!-- учасник команды 1 -->
             <li class="team-box">
-              <img
-                class="img-corect team-img"
-                src="./images/images-index/team-ighor-a.jpg"
-                alt="фото члена команды"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/images-index/team-ighor-a-desk.jpg    1x,
+                    ./images/images-index/team-ighor-a-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-ighor-a-tab.jpg    1x,
+                    ./images/images-index/team-ighor-a-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-ighor-a-mob.jpg    1x,
+                    ./images/images-index/team-ighor-a-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="img-corect team-img"
+                  src="./images/images-index/team-ighor-a-mob.jpg"
+                  alt="фото члена команды"
+                />
+              </picture>
               <div class="container-team">
                 <h3 class="team-name">Игорь Демьяненко</h3>
                 <p class="text-description" lang="en">Product Designer</p>
@@ -328,11 +374,34 @@
             </li>
             <!-- учасник команды 2 -->
             <li class="team-box">
-              <img
-                class="img-corect team-img"
-                src="./images/images-index/team-olga-b.jpg"
-                alt="фото члена команды"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/images-index/team-olga-b-desk.jpg    1x,
+                    ./images/images-index/team-olga-b-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-olga-b-tab.jpg    1x,
+                    ./images/images-index/team-olga-b-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-olga-b-mob.jpg    1x,
+                    ./images/images-index/team-olga-b-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="img-corect team-img"
+                  src="./images/images-index/team-olga-b-mob.jpg"
+                  alt="фото члена команды"
+                />
+              </picture>
               <div class="container-team">
                 <h3 class="team-name">Ольга Репина</h3>
                 <p class="text-description" lang="en">Frontend Developer</p>
@@ -391,11 +460,34 @@
             </li>
             <!-- учасник команды 3 -->
             <li class="team-box">
-              <img
-                class="img-corect team-img"
-                src="./images/images-index/team-nikolay-c.jpg"
-                alt="фото члена команды"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/images-index/team-nikolay-c-desk.jpg    1x,
+                    ./images/images-index/team-nikolay-c-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-nikolay-c-tab.jpg    1x,
+                    ./images/images-index/team-nikolay-c-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-nikolay-c-mob.jpg    1x,
+                    ./images/images-index/team-nikolay-c-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="img-corect team-img"
+                  src="./images/images-index/team-nikolay-c-mob.jpg"
+                  alt="фото члена команды"
+                />
+              </picture>
               <div class="container-team">
                 <h3 class="team-name">Николай Тарасов</h3>
                 <p class="text-description" lang="en">Marketing</p>
@@ -454,11 +546,35 @@
             </li>
             <!-- учасник команды 4 -->
             <li class="team-box">
-              <img
-                class="img-corect team-img"
-                src="./images/images-index/team-mikle-d.jpg"
-                alt="фото члена команды"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/images-index/team-mikle-d-desk.jpg    1x,
+                    ./images/images-index/team-mikle-d-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-mikle-d-tab.jpg    1x,
+                    ./images/images-index/team-mikle-d-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/images-index/team-mikle-d-mob.jpg    1x,
+                    ./images/images-index/team-mikle-d-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="img-corect team-img"
+                  src="./images/images-index/team-mikle-d-mob.jpg"
+                  alt="фото члена команды"
+                />
+              </picture>
+
               <div class="container-team">
                 <h3 class="team-name">Михаил Ермаков</h3>
                 <p class="text-description" lang="en">UI Designer</p>
@@ -763,7 +879,7 @@
               </svg>
             </span>
             <span class="modal-form-check-agreement"
-              >Соглашаюсь с рассылкой и принимаю&nbsp;
+              >Соглашаюсь с рассылкой и принимаю
               <a class="modal-form-check-link" href="">Условия договора</a>
             </span>
           </label>

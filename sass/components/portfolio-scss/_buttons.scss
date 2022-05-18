@@ -2,12 +2,31 @@
 /* делаем кнопки портфолио в линию и расположение */
 .button-line {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .button-position {
   margin-left: 8px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-top: 15px;
+
+    &:nth-child(4) {
+      margin-left: 0;
+    }
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    margin-top: 15px;
+  }
 }
 .button-position:first-child {
   margin-left: 0px;

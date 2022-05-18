@@ -99,6 +99,11 @@
   flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
+
+  transition: color var(--animation-timing-function);
+  &:hover {
+    color: var(--color-selection-nav-text);
+  }
 }
 
 .modal-form-box.indent {
@@ -111,6 +116,10 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--color-text);
+
+  @media screen and (max-width: 1199px) {
+    color: currentColor;
+  }
 }
 
 .modal-form-input {

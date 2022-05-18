@@ -25,12 +25,65 @@ studio ГЕРОЙ секция
       var(--color-hero-shadow),
       var(--color-hero-shadow)
     ),
-    url(../images/images-index/hero-background.jpg);
+    url(../images/images-index/hero-bg-mob-1x.jpg);
   background-position: center;
   background-size: cover;
 
+  // фоновая картинка герой 2Х для мобильный
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-mob-2x.jpg);
+  }
+
   @media screen and (max-width: 1199px) {
     height: 400px;
+  }
+  // фоновая картинка герой 1Х-2Х для tablet
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-tab-1x.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          var(--color-hero-shadow),
+          var(--color-hero-shadow)
+        ),
+        url(../images/images-index/hero-bg-tab-2x.jpg);
+    }
+  }
+  // фоновая картинка герой 1Х-2Х для desktop
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-desk-1x.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          var(--color-hero-shadow),
+          var(--color-hero-shadow)
+        ),
+        url(../images/images-index/hero-bg-desk-2x.jpg);
+    }
   }
 }
 

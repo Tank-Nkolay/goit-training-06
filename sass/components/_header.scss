@@ -3,6 +3,8 @@
 /* выравнивание элементов header в линю и минимальная высота */
 
 .header {
+  border-bottom: 1px solid var(--color-line-header);
+
   @media screen and (max-width: 767px) {
     padding-top: 10px;
     padding-bottom: 10px;
