@@ -110,6 +110,12 @@ footer
 
 /* --------- футер секция присойдиняйтесь и соц. сети --------- */
 
+.footer-social {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+}
+
 /* футер header - присоединяйтесь */
 .footer-social-header {
   font-weight: 700;
@@ -163,16 +169,8 @@ footer
 /* --------- футер секция подписаться на рассылку--------- */
 
 .footer-subscription {
-  @media screen and (min-width: 481px) and (max-width: 1199px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   @media screen and (max-width: 1199px) {
     margin-top: 60px;
-  }
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
   }
 }
 
@@ -197,7 +195,6 @@ footer
 .footer-subscription-input {
   width: 358px;
   height: 50px;
-  margin-right: 12px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -221,7 +218,9 @@ footer
   @media screen and (max-width: 479px) {
     max-width: 290px;
   }
-
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
   @media screen and (min-width: 481px) and (max-width: 1199px) {
     width: 450px;
   }

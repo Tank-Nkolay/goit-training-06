@@ -6,7 +6,6 @@ portfolio БЛОК примеры наших робот
 .product-list {
   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -32,6 +31,8 @@ portfolio БЛОК примеры наших робот
 
 /* портфолио примеры робот в коробке */
 .box-example {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   transition: box-shadow 250ms var(--animation-timing-function);
 
@@ -87,18 +88,19 @@ portfolio БЛОК примеры наших робот
   transform: translateY(101%);
   transition: transform 250ms var(--animation-timing-function);
 
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+
   .box-example:hover & {
     transform: translateY(0);
   }
 
-  height: 294px;
-  padding-left: 24px;
-  padding-right: 24px;
-
   @media screen and (max-width: 479px) {
+    font-size: 14px;
     width: 290px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 450px;
@@ -119,6 +121,7 @@ portfolio БЛОК примеры наших робот
 
 /* коробка текста описания наших работ */
 .box-description {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid var(--color-line-box);
   border-top: none;
