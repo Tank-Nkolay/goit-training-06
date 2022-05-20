@@ -103,7 +103,8 @@ body {
   -webkit-transition: color 250ms var(--animation-timing-function);
   transition: color 250ms var(--animation-timing-function);
 }
-.selection-nav:hover, .selection-nav:focus {
+.selection-nav:hover,
+.selection-nav:focus {
   color: var(--color-selection-nav-text);
 }
 
@@ -156,8 +157,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -166,11 +167,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -264,8 +265,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .contacts-position:last-child {
     margin-right: 0;
@@ -282,8 +283,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: color 250ms var(--animation-timing-function);
   transition: color 250ms var(--animation-timing-function);
 }
@@ -293,7 +294,8 @@ body {
     padding-bottom: 32px;
   }
 }
-.contacts-font:hover, .contacts-font:focus {
+.contacts-font:hover,
+.contacts-font:focus {
   color: var(--color-selection-nav-text);
 }
 
@@ -304,7 +306,8 @@ body {
   -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
 }
-.contacts-font:hover .contacts-icon, .contacts-font:focus .contacts-icon {
+.contacts-font:hover .contacts-icon,
+.contacts-font:focus .contacts-icon {
   fill: var(--color-selection-nav-text);
 }
 
@@ -314,11 +317,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border: none;
   background-color: transparent;
   width: 40px;
@@ -338,7 +341,8 @@ body {
   -webkit-transition: fill var(--animation-timing-function);
   transition: fill var(--animation-timing-function);
 }
-.mobile-menu-btn .icon-open:hover, .mobile-menu-btn .icon-open:focus {
+.mobile-menu-btn .icon-open:hover,
+.mobile-menu-btn .icon-open:focus {
   fill: var(--color-selection-nav-text);
 }
 
@@ -355,7 +359,8 @@ body {
   -webkit-transition: fill var(--animation-timing-function);
   transition: fill var(--animation-timing-function);
 }
-.mobile-menu-btn.is-open .icon-close:hover, .mobile-menu-btn.is-open .icon-close:focus {
+.mobile-menu-btn.is-open .icon-close:hover,
+.mobile-menu-btn.is-open .icon-close:focus {
   fill: var(--color-selection-nav-text);
 }
 
@@ -366,15 +371,15 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   top: 0;
   left: 0;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   background-color: #fff;
   width: 100%;
   height: 100%;
@@ -388,7 +393,7 @@ body {
 
 .mobile-menu.is-open {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 .mobile-menu-contacts {
@@ -438,7 +443,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 64px;
 }
@@ -477,15 +482,42 @@ studio ГЕРОЙ секция
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-mob-1x.jpg);
-  background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-mob-1x.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--color-hero-shadow)),
+      to(var(--color-hero-shadow))
+    ),
+    url(../images/images-index/hero-bg-mob-1x.jpg);
+  background-image: linear-gradient(
+      to right,
+      var(--color-hero-shadow),
+      var(--color-hero-shadow)
+    ),
+    url(../images/images-index/hero-bg-mob-1x.jpg);
   background-position: center;
   background-size: cover;
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero--img {
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-mob-2x.jpg);
-    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-mob-2x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(var(--color-hero-shadow)),
+        to(var(--color-hero-shadow))
+      ),
+      url(../images/images-index/hero-bg-mob-2x.jpg);
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-mob-2x.jpg);
   }
 }
 @media screen and (max-width: 1199px) {
@@ -495,26 +527,80 @@ studio ГЕРОЙ секция
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero--img {
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-tab-1x.jpg);
-    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-tab-1x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(var(--color-hero-shadow)),
+        to(var(--color-hero-shadow))
+      ),
+      url(../images/images-index/hero-bg-tab-1x.jpg);
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-tab-1x.jpg);
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero--img {
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-tab-2x.jpg);
-    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-tab-2x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(var(--color-hero-shadow)),
+        to(var(--color-hero-shadow))
+      ),
+      url(../images/images-index/hero-bg-tab-2x.jpg);
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero--img {
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-desk-1x.jpg);
-    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-desk-1x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(var(--color-hero-shadow)),
+        to(var(--color-hero-shadow))
+      ),
+      url(../images/images-index/hero-bg-desk-1x.jpg);
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-desk-1x.jpg);
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero--img {
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-hero-shadow)), to(var(--color-hero-shadow))), url(../images/images-index/hero-bg-desk-2x.jpg);
-    background-image: linear-gradient(to right, var(--color-hero-shadow), var(--color-hero-shadow)), url(../images/images-index/hero-bg-desk-2x.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(var(--color-hero-shadow)),
+        to(var(--color-hero-shadow))
+      ),
+      url(../images/images-index/hero-bg-desk-2x.jpg);
+    background-image: linear-gradient(
+        to right,
+        var(--color-hero-shadow),
+        var(--color-hero-shadow)
+      ),
+      url(../images/images-index/hero-bg-desk-2x.jpg);
   }
 }
 
@@ -555,7 +641,7 @@ studio ГЕРОЙ секция
   line-height: 1.88;
   letter-spacing: 0.06em;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   width: 200px;
@@ -570,7 +656,8 @@ studio ГЕРОЙ секция
   -webkit-transition: background-color 250ms var(--animation-timing-function);
   transition: background-color 250ms var(--animation-timing-function);
 }
-.button--selection:hover, .button--selection:focus {
+.button--selection:hover,
+.button--selection:focus {
   background-color: var(--color-selection-button-focus);
 }
 
@@ -584,7 +671,7 @@ studio БЛОК наши преимущества
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -601,13 +688,13 @@ studio БЛОК наши преимущества
 @media screen and (min-width: 768px) {
   .benefits__list {
     -ms-flex-preferred-size: 354px;
-        flex-basis: 354px;
+    flex-basis: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .benefits__list {
     -ms-flex-preferred-size: 270px;
-        flex-basis: 270px;
+    flex-basis: 270px;
   }
 }
 
@@ -633,11 +720,11 @@ studio БЛОК наши преимущества
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -677,8 +764,8 @@ studio БЛОК чем мы занимаемся
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .example--indent {
@@ -714,11 +801,11 @@ studio БЛОК чем мы занимаемся
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* убираем нижний отступ у изображений */
@@ -736,25 +823,25 @@ studio БЛОК наша команда
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 30px;
 }
 @media screen and (max-width: 480px) {
   .box-position {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1199px) {
   .box-position {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 30px;
   }
 }
@@ -764,8 +851,10 @@ studio БЛОК наша команда
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 1199px) {
@@ -813,8 +902,10 @@ studio БЛОК наша команда
 /* карточка команды */
 .team-box {
   background-color: var(--color-background-main);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 480px) {
@@ -847,12 +938,12 @@ studio БЛОК наша команда
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 16px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -861,24 +952,27 @@ studio БЛОК наша команда
   width: 44px;
   height: 44px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
   color: var(--color-social-link-team);
   background-color: var(--color-social-link-team-background);
-  -webkit-transition: fill 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function);
-  transition: fill 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function);
+  -webkit-transition: fill 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
+  transition: fill 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function);
 }
-.social-item:hover, .social-item:focus {
+.social-item:hover,
+.social-item:focus {
   color: var(--color-social-link-team-hover);
   background-color: var(--color-selection-nav-text);
 }
@@ -889,7 +983,8 @@ studio БЛОК наша команда
   -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
 }
-.social-item:hover .social-icon, .social-item:focus .social-icon {
+.social-item:hover .social-icon,
+.social-item:focus .social-icon {
   fill: var(--color-social-link-team-hover);
 }
 
@@ -920,17 +1015,17 @@ studio БЛОК Постоянные клиенты
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 30px;
 }
 @media screen and (max-width: 1199px) {
   .clients-list {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -942,17 +1037,18 @@ studio БЛОК Постоянные клиенты
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   -webkit-transition: border 250ms var(--animation-timing-function);
   transition: border 250ms var(--animation-timing-function);
 }
-.clients-item:hover, .clients-item:focus {
+.clients-item:hover,
+.clients-item:focus {
   border: 1px solid var(--color-selection-nav-text);
 }
 @media screen and (max-width: 480px) {
@@ -972,7 +1068,8 @@ studio БЛОК Постоянные клиенты
   transition: fill 250ms var(--animation-timing-function);
   fill: #afb1b8;
 }
-.clients-item:hover .clients-icon, .clients-item:focus .clients-icon {
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon {
   fill: var(--color-selection-nav-text);
 }
 
@@ -999,8 +1096,8 @@ footer
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1009,8 +1106,8 @@ footer
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
@@ -1023,15 +1120,15 @@ footer
   .footer-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-wrap {
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin-left: 61px;
     margin-right: 74px;
   }
@@ -1139,11 +1236,11 @@ footer
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 16px;
   gap: 10px;
 }
@@ -1153,23 +1250,24 @@ footer
   width: 44px;
   height: 44px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   cursor: pointer;
   background-color: var(--color-footer-social-background);
   -webkit-transition: background-color 250ms var(--animation-timing-function);
   transition: background-color 250ms var(--animation-timing-function);
 }
-.footer-social-item:hover, .footer-social-item:focus {
+.footer-social-item:hover,
+.footer-social-item:focus {
   background-color: var(--color-selection-nav-text);
 }
 
@@ -1179,7 +1277,8 @@ footer
   -webkit-transition: fill 250ms var(--animation-timing-function);
   transition: fill 250ms var(--animation-timing-function);
 }
-.footer-social-item:hover .footer-social-icon, .footer-social-item:focus .footer-social-icon {
+.footer-social-item:hover .footer-social-icon,
+.footer-social-item:focus .footer-social-icon {
   fill: var(--color-social-link-team-hover);
 }
 
@@ -1199,11 +1298,6 @@ footer
   text-transform: uppercase;
   color: var(--color-about-us-text);
 }
-@media screen and (max-width: 1199px) {
-  .footer-subscription-header {
-    margin-top: 60px;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .footer-subscription-box {
@@ -1211,8 +1305,8 @@ footer
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-left: auto;
   }
 }
@@ -1224,9 +1318,9 @@ footer
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--color-background-section-one);
   outline: transparent;
@@ -1281,11 +1375,11 @@ footer
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
@@ -1300,7 +1394,7 @@ footer
   cursor: pointer;
   background-color: var(--color-selection-button-background);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 @media screen and (max-width: 1199px) {
@@ -1329,14 +1423,14 @@ footer
 @media screen and (max-width: 767px) {
   .button-line {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 768px) {
   .button-line {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -1350,7 +1444,7 @@ footer
   .button-position:nth-child(4) {
     margin-left: 0;
   }
-  .button-position:nth-child(-n+3) {
+  .button-position:nth-child(-n + 3) {
     margin-top: 0;
   }
 }
@@ -1376,8 +1470,10 @@ footer
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   cursor: pointer;
   max-width: 150px;
@@ -1405,16 +1501,28 @@ footer
 
 /* tab кнопок portfolio */
 .selection-button-portfolio {
-  -webkit-transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
-  transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
-  transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), box-shadow 250ms var(--animation-timing-function);
-  transition: color 250ms var(--animation-timing-function), background-color 250ms var(--animation-timing-function), box-shadow 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
+  -webkit-transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function),
+    -webkit-box-shadow 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function),
+    -webkit-box-shadow 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function),
+    box-shadow 250ms var(--animation-timing-function);
+  transition: color 250ms var(--animation-timing-function),
+    background-color 250ms var(--animation-timing-function),
+    box-shadow 250ms var(--animation-timing-function),
+    -webkit-box-shadow 250ms var(--animation-timing-function);
 }
-.selection-button-portfolio:hover, .selection-button-portfolio:focus {
+.selection-button-portfolio:hover,
+.selection-button-portfolio:focus {
   color: var(--color-selection-button-text);
   background-color: var(--color-selection-button-background);
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ======================================== 
@@ -1427,10 +1535,10 @@ portfolio БЛОК примеры наших робот
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -1458,11 +1566,11 @@ portfolio БЛОК примеры наших робот
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -1472,11 +1580,15 @@ portfolio БЛОК примеры наших робот
   -webkit-transition: -webkit-box-shadow 250ms var(--animation-timing-function);
   transition: -webkit-box-shadow 250ms var(--animation-timing-function);
   transition: box-shadow 250ms var(--animation-timing-function);
-  transition: box-shadow 250ms var(--animation-timing-function), -webkit-box-shadow 250ms var(--animation-timing-function);
+  transition: box-shadow 250ms var(--animation-timing-function),
+    -webkit-box-shadow 250ms var(--animation-timing-function);
 }
-.box-example:hover, .box-example:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.box-example:hover,
+.box-example:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 @media screen and (max-width: 767px) {
   .box-example {
@@ -1528,18 +1640,19 @@ portfolio БЛОК примеры наших робот
   bottom: 0;
   left: 0;
   -webkit-transform: translateY(101%);
-          transform: translateY(101%);
+  transform: translateY(101%);
   -webkit-transition: -webkit-transform 250ms var(--animation-timing-function);
   transition: -webkit-transform 250ms var(--animation-timing-function);
   transition: transform 250ms var(--animation-timing-function);
-  transition: transform 250ms var(--animation-timing-function), -webkit-transform 250ms var(--animation-timing-function);
+  transition: transform 250ms var(--animation-timing-function),
+    -webkit-transform 250ms var(--animation-timing-function);
   height: 294px;
   padding-left: 24px;
   padding-right: 24px;
 }
 .box-example:hover .product-description {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 @media screen and (max-width: 479px) {
   .product-description {
@@ -1609,15 +1722,17 @@ portfolio БЛОК примеры наших робот
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--animation-timing-function);
-  transition: opacity 250ms var(--animation-timing-function), visibility 250ms var(--animation-timing-function);
+  -webkit-transition: opacity 250ms var(--animation-timing-function),
+    visibility 250ms var(--animation-timing-function);
+  transition: opacity 250ms var(--animation-timing-function),
+    visibility 250ms var(--animation-timing-function);
   z-index: 110;
 }
 
 /* анимация появления модального окна */
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
-          transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* само модальное окно */
@@ -1628,11 +1743,13 @@ portfolio БЛОК примеры наших робот
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   padding: 40px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
@@ -1664,11 +1781,11 @@ portfolio БЛОК примеры наших робот
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .modal-close-cross {
@@ -1695,11 +1812,11 @@ portfolio БЛОК примеры наших робот
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* заглавие модального окна */
@@ -1719,8 +1836,8 @@ portfolio БЛОК примеры наших робот
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 10px;
   width: 100%;
   -webkit-transition: color var(--animation-timing-function);
@@ -1753,14 +1870,15 @@ portfolio БЛОК примеры наших робот
   padding: 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 4px;
   outline: transparent;
   color: var(--color-text);
   -webkit-transition: border-color var(--animation-timing-function);
   transition: border-color var(--animation-timing-function);
 }
-.modal-form-input:hover, .modal-form-input:focus {
+.modal-form-input:hover,
+.modal-form-input:focus {
   border-color: var(--color-selection-nav-text);
 }
 
@@ -1814,7 +1932,8 @@ portfolio БЛОК примеры наших робот
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-cooment:hover, .modal-form-cooment:focus {
+.modal-form-cooment:hover,
+.modal-form-cooment:focus {
   border-color: var(--color-selection-nav-text);
 }
 
@@ -1826,14 +1945,14 @@ portfolio БЛОК примеры наших робот
 .modal-form-box.check-center {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .modal-form-check:checked + .modal-form-check-mark {
@@ -1853,17 +1972,19 @@ portfolio БЛОК примеры наших робот
   margin-right: 8px;
   border: 2px solid var(--color-main);
   border-radius: 2px;
-  -webkit-transition: border-color var(--animation-timing-function), background-color var(--animation-timing-function);
-  transition: border-color var(--animation-timing-function), background-color var(--animation-timing-function);
+  -webkit-transition: border-color var(--animation-timing-function),
+    background-color var(--animation-timing-function);
+  transition: border-color var(--animation-timing-function),
+    background-color var(--animation-timing-function);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .modal-form-check-icon {
@@ -1883,7 +2004,7 @@ portfolio БЛОК примеры наших робот
 
 .modal-form-check-link {
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   text-underline-position: under;
   color: var(--color-selection-button-background);
 }
@@ -1901,12 +2022,13 @@ portfolio БЛОК примеры наших робот
   color: var(--color-selection-button-text);
   background-color: var(--color-selection-button-background);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   -webkit-transition: background-color var(--animation-timing-function);
   transition: background-color var(--animation-timing-function);
 }
-.modal-form-submit-button:hover, .modal-form-submit-button:focus {
+.modal-form-submit-button:hover,
+.modal-form-submit-button:focus {
   background-color: var(--color-modal-button-submit-hover);
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

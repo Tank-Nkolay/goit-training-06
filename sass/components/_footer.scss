@@ -119,13 +119,6 @@ footer
   text-transform: uppercase;
   color: var(--color-footer-adress);
   margin-bottom: 20px;
-
-  @media screen and (max-width: 1199px) {
-    margin-top: 60px;
-  }
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
-  }
 }
 
 /* выравниваем ссылки социальных сетей в линию и отступы */
@@ -175,7 +168,11 @@ footer
     margin-right: auto;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
   }
 }
 
@@ -187,10 +184,6 @@ footer
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-about-us-text);
-
-  @media screen and (max-width: 1199px) {
-    margin-top: 60px;
-  }
 }
 
 .footer-subscription-box {
