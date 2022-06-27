@@ -1,23 +1,2 @@
-@import "./utils/vars";
 @import "./utils/base";
-@import "./utils/selection";
-////////////////////////////////
-@import "./components/conteiner";
-@import "./components/section";
-// header //
-@import "./components/header";
-@import "./components/mobile-menu";
-// index //
-@import "./components/index-scss/hero";
-@import "./components/index-scss/benifits";
-@import "./components/index-scss/example";
-@import "./components/index-scss/team";
-@import "./components/index-scss/clients";
-// footer //
-@import "./components/footer";
-// portfolio //
-@import "./components/portfolio-scss/portfolio-hero";
-@import "./components/portfolio-scss/buttons";
-@import "./components/portfolio-scss/product";
-// modal window //
-@import "./components/modal";
+@import "./components/index-scss/for-training";

@@ -22,23 +22,3 @@ a {
   color: currentColor;
 }
 
-/* убираем нижний отступ у изображений */
-.img-corect {
-  vertical-align: bottom;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--color-background-main);
-  color: var(--color-main);
-  font-size: 14px;
-}
-
-.link {
-  color: var(--color-main);
-  text-decoration: none;
-}
-
-.link-decoration {
-  text-decoration: none;
-}
