@@ -94,10 +94,10 @@
  * Типов транзацкий всего два.
  * Можно положить либо снять деньги со счета.
  */
-const Transaction = {
-  DEPOSIT: "deposit",
-  WITHDRAW: "withdraw",
-};
+// const Transaction = {
+//   DEPOSIT: "deposit",
+//   WITHDRAW: "withdraw",
+// };
 
 // /*
 //  * Каждая транзакция это объект со свойствами: id, type и amount
@@ -232,12 +232,78 @@ const Transaction = {
 //   },
 // ];
 
-function multiply(firstNumber, secondNumber, ...otherArgs) {
-  console.log(firstNumber); // Значение первого аргумента
-  console.log(secondNumber); // Значение второго аргумента
-  console.log(otherArgs); // Массив остальных аргументов
-}
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = number >= start && number <= end;
+//   // Change this line
 
-multiply(1, 2);
-multiply(1, 2, 3);
-multiply(1, 2, 3, 4);
+//   return isNotInRange;
+// }
+
+// isNumberNotInRange(10, 30, 17);
+// isNumberNotInRange(10, 30, 5);
+// isNumberNotInRange(20, 50, 24);
+// isNumberNotInRange(20, 50, 76);
+
+// console.log(!isNumberNotInRange(10, 30, 17));
+
+// function getSubstring(string) {
+//   // const substring = ${string}.slice(0, 4);
+
+//   console.log(string.slice(0, 4));
+
+//   return substring;
+// }
+
+// getSubstring("Hello world");
+// // getSubstring("Hello world", 6);
+// // getSubstring("Hello world", 8);
+// // getSubstring("Hello world", 11);
+// // getSubstring("Hello world", 0);
+
+// console.log(substring);
+
+// ____________________________________________________________
+
+// const productName = "Repair droid";
+// console.log(productName.slice(0, 4)); // "Repa"
+// console.log(productName.slice(3, 9)); // "air dr"
+// console.log(productName.slice(0, productName.length)); // "Repair droid"
+// console.log(productName.slice(7, productName.length)); // "droid"
+
+// ____________________________________________________________
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length);
+
+//   return substring;
+// }
+
+// getSubstring("Hello world", 3);
+// getSubstring("Hello world", 6);
+// getSubstring("Hello world", 8);
+// getSubstring("Hello world", 11);
+// getSubstring("Hello world", 0);
+
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length > maxLength) {
+//     const x = message.slice(0, maxLength);
+//     result = `${x}...`;
+//   } else {
+//     result = message;
+//   }
+
+//   console.log(result);
+
+//   /// Change code above this line
+//   return result;
+// }
+
+// formatMessage("Curabitur ligula sapien", 16);
+// formatMessage("Curabitur ligula sapien", 23);
+// formatMessage("Vestibulum facilisis purus nec", 20);
+// formatMessage("Vestibulum facilisis purus nec", 30);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
