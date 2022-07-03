@@ -343,12 +343,56 @@
 
 // console.log(lastElement);
 
-function getExtremeElements(array) {
-  const getFirstLastElement = [array[0], array[array.length - 1]];
-  console.log(getFirstLastElement);
-  return getFirstLastElement;
-}
+// function getExtremeElements(array) {
+//   const getFirstLastElement = [array[0], array[array.length - 1]];
+//   console.log(getFirstLastElement);
+//   return getFirstLastElement;
+// }
 
-getExtremeElements([1, 2, 3, 4, 5]); // [1, 5]
-getExtremeElements(["Earth", "Mars", "Venus"]); // ["Earth", "Venus"]
-getExtremeElements(["apple", "peach", "pear", "banana"]); // ["apple", "banana"]
+// getExtremeElements([1, 2, 3, 4, 5]); // [1, 5]
+// getExtremeElements(["Earth", "Mars", "Venus"]); // ["Earth", "Venus"]
+// getExtremeElements(["apple", "peach", "pear", "banana"]); // ["apple", "banana"]
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   // Change code below this line
+
+//   let splitArray;
+//   let getCostWork;
+
+//   splitArray = message.split(" ");
+
+//   getCostWork = splitArray.length * pricePerWord;
+
+//   console.log(getCostWork);
+
+//   return getCostWork;
+
+//   // Change code above this line
+// }
+
+// calculateEngravingPrice("JavaScript is in my blood", 10); // 50
+// calculateEngravingPrice("JavaScript is in my blood", 20); // 100
+// calculateEngravingPrice("Web-development is creative work", 40); // 160
+// calculateEngravingPrice("Web-development is creative work", 20); // 80
+
+// function slugify(title) {
+//   // Change code below this line
+
+//   let getLowerCase;
+//   let getJoin;
+//   let slug;
+
+//   getLowerCase = title.toLowerCase();
+//   getJoin = getLowerCase.split(" ");
+
+//   slug = getJoin.join("-");
+
+//   console.log(slug);
+
+//   return slug;
+
+//   // Change code above this line
+// }
+
+// slugify("Arrays for begginers");
+// slugify("English for developer");
