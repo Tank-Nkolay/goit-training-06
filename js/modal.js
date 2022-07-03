@@ -333,12 +333,22 @@
 
 // console.log(firstElement);
 
-const fruits = ["apple", "peach", "pear", "banana"];
+// const fruits = ["apple", "peach", "pear", "banana"];
 
-// Change code below this line
+// // Change code below this line
 
-// const lastElementIndex = ;
+// // const lastElementIndex = ;
 
-const lastElement = fruits[fruits.length - 1];
+// const lastElement = fruits[fruits.length - 1];
 
-console.log(lastElement);
+// console.log(lastElement);
+
+function getExtremeElements(array) {
+  const getFirstLastElement = [array[0], array[array.length - 1]];
+  console.log(getFirstLastElement);
+  return getFirstLastElement;
+}
+
+getExtremeElements([1, 2, 3, 4, 5]); // [1, 5]
+getExtremeElements(["Earth", "Mars", "Venus"]); // ["Earth", "Venus"]
+getExtremeElements(["apple", "peach", "pear", "banana"]); // ["apple", "banana"]
