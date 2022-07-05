@@ -133,26 +133,94 @@
 // includes(["apple", "plum", "pear", "orange"], "plum"); // возвращает true
 // includes(["apple", "plum", "pear", "orange"], "kiwi"); // возвращает false
 
-const apartment = {
-  imgUrl: "https://via.placeholder.com/640x480",
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-  tags: ["premium", "promoted", "top"],
-  owner: {
-    name: "Henry",
-    phone: "982-126-1588",
-    email: "henry.carter@aptmail.com",
-  },
-};
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
 
-// Change code below this line
-const ownerName = apartment.owner.name;
-const ownerPhone = apartment.owner.phone;
-const ownerEmail = apartment.owner.email;
-const numberOfTags = apartment.tags.length;
-const firstTag = apartment.tags[0];
-const lastTag = apartment.tags[length - 1];
-// Change code above this line
+// // Change code below this line
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags[length - 1];
+// // Change code above this line
 
-console.log(apartment.tags[apartment.tags.length - 1]);
+// console.log(apartment.tags[apartment.tags.length - 1]);
+
+// ================================================================
+
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   // Change code below this line
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+//   // Change code above this line
+// }
+// =================================================
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//   // Ключ
+//   values.push(apartment[key]);
+
+// }
+
+// console.log(values);
+// =================================================
+
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = [];
+
+//   const keys = Object.keys(object);
+
+//   for (const key of keys) {
+//     propCount.push(object[key]);
+//   }
+
+//   console.log(propCount);
+
+//   return propCount.length;
+//   // Change code above this line
+// }
+
+// countProps({}); // возвращает 0
+// countProps({ name: "Mango", age: 2 }); // возвращает 2
+// countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }); // возвращает 3
+
+// =================================================
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+  // Change code below this line
+
+  // Change code above this line
+  return totalSalary;
+}
+
+countTotalSalary({}); // возвращает 0
+countTotalSalary({ mango: 100, poly: 150, alfred: 80 }); // возвращает 330
+countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }); // возвращает 400
