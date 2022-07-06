@@ -213,14 +213,186 @@
 
 // =================================================
 
-function countTotalSalary(salaries) {
-  let totalSalary = 0;
-  // Change code below this line
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
 
+//   const keys = Object.keys(salaries);
+
+//   // console.log(keys);
+
+//   for (const key of keys) {
+//     totalSalary += salaries[key];
+
+//     console.log(totalSalary);
+//   }
+
+//   return totalSalary;
+// }
+
+// countTotalSalary({}); // возвращает 0
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 }); // возвращает 330
+// countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }); // возвращает 400
+
+// =================================================
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// // const keys = Object.keys(colors);
+
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+
+// =================================================
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   let val = null;
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       val = product.price;
+//     }
+//   }
+//   return val;
+// }
+
+// getProductPrice("Radar"); // возвращает 1300.
+// getProductPrice("Grip"); // возвращает 1200.
+// getProductPrice("Scanner"); // возвращает 2700.
+// getProductPrice("Droid"); // возвращает 400.
+// getProductPrice("Engine"); // возвращает null.
+
+// =================================================
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const val = [];
+//   for (const product of products) {
+//     if (product.hasOwnProperty([propName])) {
+//       val.push(product[propName]);
+//     }
+//   }
+//   console.log(val);
+//   return val;
+// }
+
+// getAllPropValues("name"); // возвращает ["Radar", "Scanner", "Droid", "Grip"]
+// getAllPropValues("quantity"); // возвращает [4, 3, 7, 9]
+// getAllPropValues("price"); // возвращает [1300, 2700, 400, 1200]
+// getAllPropValues("category"); // возвращает []
+
+// =================================================
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   let calc = 0;
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       calc = product.price * product.quantity;
+//     }
+//   }
+//   console.log(calc);
+//   return calc;
+// }
+
+// calculateTotalPrice("Blaster"); // возвращает 0
+// calculateTotalPrice("Radar"); // возвращает 5200
+// calculateTotalPrice("Droid"); // возвращает 2800
+// calculateTotalPrice("Grip"); // возвращает 10800
+// calculateTotalPrice("Scanner"); // возвращает 8100
+
+// const forecast = {
+
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+
+// const {today: {low: lowToday, high; highToday, icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"},
+// tomorrow: {low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"},} = forecast;
+
+// const highToday = forecast.today.high;
+// const lowToday = forecast.today.low;
+// const todayIcon = forecast.today.icon;
+
+// const highTomorrow = forecast.tomorrow.high;
+// const lowTomorrow = forecast.tomorrow.low;
+// const tomorrowIcon = forecast.tomorrow.icon;
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+
+//   let x;
+//   x = { completed, category, priority, ...data };
+
+//   console.log(x);
+
+//   return x;
+//   // Change code below this line
+
+//   // Change code above this line
+// }
+
+// makeTask({}); // возвращает { category: "General", priority: "Normal", completed: false }
+// makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }); // возвращает { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// makeTask({ category: "Finance", text: "Take interest" }); // возвращает { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+// makeTask({ priority: "Low", text: "Choose shampoo" }); // возвращает { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+// makeTask({ text: "Buy bread" }); // возвращает { category: "General", priority: "Normal", text: "Buy bread", completed: false }
+
+// Change code below this line
+function add(...args) {
   // Change code above this line
-  return totalSalary;
+  let x;
+
+  x = { ...args };
+  console.log(x);
+
+  // for (let i = 0; i < args.length; i += 1) {
+  //   console.log(i);
+  // }
+  console.log(args);
+  return x;
 }
 
-countTotalSalary({}); // возвращает 0
-countTotalSalary({ mango: 100, poly: 150, alfred: 80 }); // возвращает 330
-countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }); // возвращает 400
+add(15, 27); // возвращает 42
+add(12, 4, 11, 48); // возвращает 75
+add(32, 6, 13, 19, 8); // возвращает 78
+add(74, 11, 62, 46, 12, 36); // возвращает 241
