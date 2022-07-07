@@ -378,21 +378,152 @@
 // makeTask({ text: "Buy bread" }); // возвращает { category: "General", priority: "Normal", text: "Buy bread", completed: false }
 
 // Change code below this line
-function add(...args) {
+// function add(...args) {
+//   // Change code above this line
+//   let x;
+
+//   x = { ...args };
+//   console.log(x);
+
+//   // for (let i = 0; i < args.length; i += 1) {
+//   //   console.log(i);
+//   // }
+//   console.log(args);
+//   return x;
+// }
+
+// add(15, 27); // возвращает 42
+// add(12, 4, 11, 48); // возвращает 75
+// add(32, 6, 13, 19, 8); // возвращает 78
+// add(74, 11, 62, 46, 12, 36); // возвращает 241
+
+// Change code below this line
+// function addOverNum(firstNumber, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//     }
+//   }
+//   console.log(total);
+//   return total;
+//   // Change code above this line
+// }
+
+// addOverNum(50, 15, 27); // возвращает 0
+// addOverNum(10, 12, 4, 11, 48, 10, 8); // возвращает 71
+// addOverNum(15, 32, 6, 13, 19, 8); // возвращает 51
+// addOverNum(20, 74, 11, 62, 46, 12, 36); // возвращает 218
+
+// ==========================================================================
+
+// // Change code below this line
+// function findMatches(args, ...arr) {
+//   const matches = [];
+
+//   for (const ar of arr) {
+//     if (args.includes(ar)) {
+//       matches.push(ar);
+//     }
+//   }
+
+//   console.log(matches);
+//   return matches;
+// }
+
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7); // возвращает [1, 2]
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2); // возвращает [17, 89, 2]
+// findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41); // возвращает [24, 9, 41]
+// findMatches([63, 11, 8, 29], 4, 7, 16); // возвращает []
+
+// ==========================================================================
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     const bookIndex = this.books.indexOf(oldName);
+//     this.books.splice(bookIndex, 1, newName);
+//   },
+// };
+
+// bookShelf.updateBook("Haze", "Dungeon chronicles"); // значение свойства books это массив ["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+
+// bookShelf.updateBook("The last kingdom", "Dune"); // значение свойства books это массив ["Dune", "Haze", "The guardian of dreams"]
+
+// console.log(bookShelf.books);
+
+// ==========================================================================
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   addPotion(potionName) {
+//     this.potions.push(potionName);
+//   },
+// };
+
+// atTheOldToad.addPotion("Invisibility"); // в свойстве potions будет массив ["Speed potion", "Dragon breath", "Stone skin", "Invisibility"]
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.addPotion("Power potion"); // в свойстве potions будет массив ["Speed potion", "Dragon breath", "Stone skin", "Invisibility", "Power potion"]
+
+// console.log(atTheOldToad.potions);
+
+// ==========================================================================
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const potion of this.potions) {
+      if (potion.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (potionName === this.potions[i].name) {
+        this.potions.splice(i, 1);
+      }
+    }
+  },
+  updatePotionName(oldName, newName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (oldName === this.potions[i].name) {
+        this.potions[i].name = newName;
+        return;
+      }
+    }
+    return `Potion ${oldName} is not in inventory!`;
+  },
+
   // Change code above this line
-  let x;
+};
 
-  x = { ...args };
-  console.log(x);
+atTheOldToad.getPotions(); // для исходного объекта возвращает [ { name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 } ]
 
-  // for (let i = 0; i < args.length; i += 1) {
-  //   console.log(i);
-  // }
-  console.log(args);
-  return x;
-}
+atTheOldToad.addPotion({ name: "Power potion", price: 270 }); // в массиве potions последним элементом будет этот объект
 
-add(15, 27); // возвращает 42
-add(12, 4, 11, 48); // возвращает 75
-add(32, 6, 13, 19, 8); // возвращает 78
-add(74, 11, 62, 46, 12, 36); // возвращает 241
+atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }); // массив potions не изменяется
+
+atTheOldToad.addPotion({ name: "Stone skin", price: 240 }); //, массив potions не изменяется
+
+atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }); // возвращает строку "Error! Potion Dragon breath is already in your inventory!"
+
+atTheOldToad.removePotion("Dragon breath"); // в свойстве potions будет массив [ { name: "Speed potion", price: 460 }, { name: "Stone skin", price: 520 } ]
+
+atTheOldToad.removePotion("Speed potion"); // в свойстве potions будет массив [ { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
+
+atTheOldToad.updatePotionName("Dragon breath", "Polymorth"); // в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Polymorth", price: 780 }, { name: "Stone skin", price: 520 } ]
+
+atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"); // в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
