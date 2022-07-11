@@ -539,3 +539,12 @@ const inAscendingScoreOrder = students.sort(
   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
 );
 console.log(inAscendingScoreOrder);
+
+const petya = {
+  username: "Petya",
+  showName() {
+    console.log(petya.username);
+  },
+};
+
+petya.showName();
