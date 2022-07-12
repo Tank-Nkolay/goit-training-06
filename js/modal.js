@@ -548,3 +548,13 @@ const petya = {
 };
 
 petya.showName();
+
+
+const petya = {
+  username: "Petya",
+  showName() {
+    console.log(petya.username);
+  },
+};
+
+petya.showName();
