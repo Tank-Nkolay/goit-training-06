@@ -528,33 +528,23 @@
 
 // atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"); // в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
 
-const students = [
-  { name: "Манго", score: 83 },
-  { name: "Поли", score: 59 },
-  { name: "Аякс", score: 37 },
-  { name: "Киви", score: 94 },
-];
+function foo() {
+  console.log(this);
+}
 
-const inAscendingScoreOrder = students.sort(
-  (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
-);
-console.log(inAscendingScoreOrder);
+foo([1, 2, 3]); // window без "use strict" и undefined с "use strict"
 
-const petya = {
-  username: "Petya",
-  showName() {
-    console.log(petya.username);
+const customer = {
+  firstName: "Jacob",
+  lastName: "Mercer",
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
   },
 };
 
-petya.showName();
+function makeMessage(callback) {
+  // callback() это вызов метода getFullName без объекта
+  console.log(`Обрабатываем заявку от ${callback()}.`);
+}
 
-
-const petya = {
-  username: "Petya",
-  showName() {
-    console.log(petya.username);
-  },
-};
-
-petya.showName();
+makeMessage(customer.getFullName); // Будет ошибка при вызове функции
