@@ -528,33 +528,52 @@
 
 // atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"); // в свойстве potions будет массив [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
 
-function foo() {
-  console.log(this);
-}
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-foo([1, 2, 3]); // window без "use strict" и undefined с "use strict"
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
 
-const customer = {
-  firstName: "Jacob",
-  lastName: "Mercer",
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//   callback(pizzaName);
+//   return;
+// }
+
+// console.log(makeMessage("Royal Grand", makePizza)); // возвращает строку "Pizza Royal Grand is being prepared, please wait..."
+// console.log(makeMessage("Ultracheese", deliverPizza)); // возвращает строку "Delivering Ultracheese pizza."
+
+const pizzaPalace = {
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName, onSuccess, onError) {
+    if (this.pizzas.includes(pizzaName)) {
+      onSuccess(pizzaName);
+      return onSuccess(pizzaName);
+    } else {
+      const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
+      onError(error);
+      return onError(error);
+    }
   },
 };
+// Change code above this line
 
-function makeMessage(callback) {
-  // callback() это вызов метода getFullName без объекта
-  console.log(`Обрабатываем заявку от ${callback()}.`);
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
 }
 
-makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+// Callback for onError
+function onOrderError(error) {
+  return `Error! ${error}`;
+}
 
-const baseSalary = 30000;
-const overtime = 10;
-const rate = 20;
-
-const getWage = (baseSalary, overtime, rate) => {
-  return baseSalary + overtime * rate;
-};
-
-getWage(baseSalary, overtime, rate);
+// Method calls with callbacks
+console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
