@@ -547,33 +547,64 @@
 // console.log(makeMessage("Royal Grand", makePizza)); // возвращает строку "Pizza Royal Grand is being prepared, please wait..."
 // console.log(makeMessage("Ultracheese", deliverPizza)); // возвращает строку "Delivering Ultracheese pizza."
 
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    if (this.pizzas.includes(pizzaName)) {
-      onSuccess(pizzaName);
-      return onSuccess(pizzaName);
-    } else {
-      const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
-      onError(error);
-      return onError(error);
-    }
-  },
-};
-// Change code above this line
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       onSuccess(pizzaName);
+//       return onSuccess(pizzaName);
+//     } else {
+//       const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
+//       onError(error);
+//       return onError(error);
+//     }
+//   },
+// };
+// // Change code above this line
 
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Классический for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Индекс ${i}, значение ${numbers[i]}`);
+// }
+
+// // Перебирающий forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Индекс ${index}, значение ${number}`);
+// });
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Change code below this line
+
+  // calculateTotalPrice.forEach(function (number, index) {
+  //   console.log(`Индекс ${index}, значение ${number}`);
+  // });
+  // Change code above this line
+  // return totalPrice;
 }
 
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
+// console.log(calculateTotalPrice[orderedItems]);
 
-// Method calls with callbacks
-console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
-console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
-console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
-console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+calculateTotalPrice([12, 85, 37, 4]); // возвращает 138
+calculateTotalPrice([164, 48, 291]); // возвращает 503
+calculateTotalPrice([412, 371, 94, 63, 176]); // возвращает 1116
+
+console.log(calculateTotalPrice(orderedItems));
