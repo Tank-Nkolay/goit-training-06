@@ -996,63 +996,68 @@
 
 // console.log(getSortedFriends(users));
 
+// // -----------------------------------------------------------------------------
+
+// // const listWithId = document.querySelector("#menu");
+// // listWithId.style.textTransform = "uppercase";
+// // listWithId.style.fontSize = "24px";
+// // console.log(listWithId);
+
+// // const listWithClass = document.querySelector(".menu");
+// // console.log(listWithClass);
+
+// // const menuItemsByTagName = document.querySelectorAll("li");
+// // console.log(menuItemsByTagName);
+
+// // const menuItemsByClass = document.querySelectorAll(".menu-item");
+// // console.log(menuItemsByClass);
+
+// // const firstMenuItem = document.querySelector(".menu-item");
+// // firstMenuItem.style.color = "tomato";
+// // console.log(firstMenuItem);
+
+// // -----------------------------------------------------------------------------
+
+// import todoItemTemplate from "./todoItemTemplate.js";
+// import mockData from "./mockData.js";
+
+// const items = mockData;
+
+// const refs = {
+//   todoList: document.querySelector(".todo-list"),
+// };
+
+// const render = () => {
+//   const list = items.map(todoItemTemplate).join("");
+
+//   refs.todoList.innerHTML = "";
+//   refs.todoList.insertAdjacentHTML("beforeend", list);
+// };
+
+// const handleAddItem = () => {
+//   const newTodo = {
+//     id: uuid.v4(),
+//     text: "dfgsdg stset wetwetwe tw",
+//     isDone: false,
+//   };
+
+//   items.push(newTodo);
+//   render();
+// };
+
+// const handleRemoveItem = () => {
+//   items.shift();
+//   render();
+// };
+
+// render();
+
+// setTimeout(handleAddItem, 2000);
+// setTimeout(handleRemoveItem, 4000);
+
 // -----------------------------------------------------------------------------
 
-// const listWithId = document.querySelector("#menu");
-// listWithId.style.textTransform = "uppercase";
-// listWithId.style.fontSize = "24px";
-// console.log(listWithId);
+// render();
 
-// const listWithClass = document.querySelector(".menu");
-// console.log(listWithClass);
-
-// const menuItemsByTagName = document.querySelectorAll("li");
-// console.log(menuItemsByTagName);
-
-// const menuItemsByClass = document.querySelectorAll(".menu-item");
-// console.log(menuItemsByClass);
-
-// const firstMenuItem = document.querySelector(".menu-item");
-// firstMenuItem.style.color = "tomato";
-// console.log(firstMenuItem);
-
-// -----------------------------------------------------------------------------
-
-import todoItemTemplate from "./todoItemTemplate.js";
-import mockData from "./mockData.js";
-
-const items = mockData;
-
-const refs = {
-  todoList: document.querySelector(".todo-list"),
-};
-
-const render = () => {
-  const list = items.map(todoItemTemplate).join("");
-
-  refs.todoList.innerHTML = "";
-  refs.todoList.insertAdjacentHTML("beforeend", list);
-};
-
-const handleAddItem = () => {
-  const newTodo = {
-    id: uuid.v4(),
-    text: "dfgsdg stset wetwetwe tw",
-    isDone: false,
-  };
-
-  items.push(newTodo);
-  render();
-};
-
-const handleRemoveItem = () => {
-  items.shift();
-  render();
-};
-
-render();
-
-setTimeout(handleAddItem, 2000);
-setTimeout(handleRemoveItem, 4000);
-
-// -----------------------------------------------------------------------------
+// setTimeout(handleAddItem, 2000);
+// setTimeout(handleRemoveItem, 4000);
