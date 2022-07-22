@@ -1061,3 +1061,13 @@
 
 // setTimeout(handleAddItem, 2000);
 // setTimeout(handleRemoveItem, 4000);
+
+// // const menuItemsByTagName = document.querySelectorAll("li");
+// // console.log(menuItemsByTagName);
+
+// // const menuItemsByClass = document.querySelectorAll(".menu-item");
+// // console.log(menuItemsByClass);
+
+// // const firstMenuItem = document.querySelector(".menu-item");
+// // firstMenuItem.style.color = "tomato";
+// // console.log(firstMenuItem);
