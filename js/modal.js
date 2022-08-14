@@ -1098,13 +1098,23 @@ const promise = new Promise((resolve, reject) => {
   const x = Math.random() > 0.5;
   console.log(Math.random());
   console.log(x);
-  if (x) {
-    resolve("успешно");
-  }
-  reject("ошибка");
+
+  setTimeout(() => {
+    if (x) {
+      resolve("успешно");
+    }
+    reject("ошибка");
+  }, 1000);
 });
 
-console.log(promise);
+promise.then(
+  (result) => {
+    console.log(result);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
 
 // -----------------------------------------------------------------------------
 // пример
