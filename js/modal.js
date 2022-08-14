@@ -1071,3 +1071,22 @@
 // // const firstMenuItem = document.querySelector(".menu-item");
 // // firstMenuItem.style.color = "tomato";
 // // console.log(firstMenuItem);
+
+// -----------------------------------------------------------------------------
+// счетчик времени
+// -----------------------------------------------------------------------------
+// const timer = {
+//   start() {
+//     const startTime = Date.now();
+
+//     setInterval(() => {
+//       const currentTime = Date.now();
+//       console.log("new Time", currentTime);
+
+//       console.log(currentTime - startTime);
+//     }, 1000);
+//   },
+// };
+
+// timer.start();
+// -----------------------------------------------------------------------------
