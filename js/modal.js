@@ -1122,32 +1122,68 @@
 // пример ПРОМИС ЦЕПОЧКА и FINALLY вариант 2
 // -----------------------------------------------------------------------------
 
-const promise = new Promise((resolve, reject) => {
-  const y = Math.random();
-  const x = y > 0.5;
+// const promise = new Promise((resolve, reject) => {
+//   const y = Math.random();
+//   const x = y > 0.5;
 
-  console.log(y);
-  console.log(x);
+//   console.log(y);
+//   console.log(x);
 
-  setTimeout(() => {
-    if (x) {
-      resolve("успешно");
-    }
-    reject("ошибка");
-  }, 1000);
-});
+//   setTimeout(() => {
+//     if (x) {
+//       resolve("успешно");
+//     }
+//     reject("ошибка");
+//   }, 1000);
+// });
 
-promise
-  .then((result) => {
-    console.log(`результат: ${result}`);
-    return 5;
-  })
-  .then((x) => {
-    console.log(x);
-    return 10;
-  })
-  .then((y) => {
+// promise
+//   .then((result) => {
+//     console.log(`результат: ${result}`);
+//     return 5;
+//   })
+//   .then((x) => {
+//     console.log(x);
+//     return 10;
+//   })
+//   .then((y) => {
+//     console.log(y);
+//   })
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("выполняется всегда"));
+
+// -----------------------------------------------------------------------------
+// пример ПРОМИС вариант 3
+// -----------------------------------------------------------------------------
+
+const makeOrder = (dish) => {
+  const DELAY = 1000;
+
+  return new Promise((resolve, reject) => {
+    const y = Math.random();
+    const x = y > 0.5;
+
     console.log(y);
-  })
-  .catch((error) => console.log(error))
-  .finally(() => console.log("выполняется всегда"));
+    console.log(x);
+
+    setTimeout(() => {
+      if (x) {
+        resolve("вот ваше блюдо");
+      }
+
+      reject("извините закончились продукты");
+    }, DELAY);
+  });
+};
+
+const q = makeOrder("пирожок");
+
+q.then(onSuccess).catch(onError);
+
+function onSuccess(result) {
+  console.log(result);
+}
+
+function onError(error) {
+  console.log(error);
+}
