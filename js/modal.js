@@ -1176,9 +1176,7 @@ const makeOrder = (dish) => {
   });
 };
 
-const q = makeOrder("пирожок");
-
-q.then(onSuccess).catch(onError);
+makeOrder("пирожок").then(onSuccess).catch(onError);
 
 function onSuccess(result) {
   console.log(result);
