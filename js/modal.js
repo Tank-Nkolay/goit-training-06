@@ -1095,8 +1095,10 @@
 // -----------------------------------------------------------------------------
 
 const promise = new Promise((resolve, reject) => {
-  const x = Math.random() > 0.5;
-  console.log(Math.random());
+  const y = Math.random();
+  const x = y > 0.5;
+
+  console.log(y);
   console.log(x);
 
   setTimeout(() => {
@@ -1109,10 +1111,10 @@ const promise = new Promise((resolve, reject) => {
 
 promise.then(
   (result) => {
-    console.log(result);
+    console.log(`результат: ${result}`);
   },
   (error) => {
-    console.log(error);
+    console.log(`результат: ${error}`);
   }
 );
 
