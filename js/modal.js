@@ -1190,7 +1190,7 @@
 // пример ПОКЕМОН
 // -----------------------------------------------------------------------------
 
-fetch("https://pokeapi.co/api/v2/ability/")
+fetch("https://pokeapi.co/api/v2/ability/3")
   .then((response) => {
     return response.json();
   })
