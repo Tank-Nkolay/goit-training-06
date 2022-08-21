@@ -1156,32 +1156,44 @@
 // пример ПРОМИС вариант 3
 // -----------------------------------------------------------------------------
 
-const makeOrder = (dish) => {
-  const DELAY = 1000;
+// const makeOrder = (dish) => {
+//   const DELAY = 1000;
 
-  return new Promise((resolve, reject) => {
-    const y = Math.random();
-    const x = y > 0.5;
+//   return new Promise((resolve, reject) => {
+//     const y = Math.random();
+//     const x = y > 0.5;
 
-    console.log(y);
-    console.log(x);
+//     console.log(y);
+//     console.log(x);
 
-    setTimeout(() => {
-      if (x) {
-        resolve("вот ваше блюдо");
-      }
+//     setTimeout(() => {
+//       if (x) {
+//         resolve("вот ваше блюдо");
+//       }
 
-      reject("извините закончились продукты");
-    }, DELAY);
+//       reject("извините закончились продукты");
+//     }, DELAY);
+//   });
+// };
+
+// makeOrder("пирожок").then(onSuccess).catch(onError);
+
+// function onSuccess(result) {
+//   console.log(result);
+// }
+
+// function onError(error) {
+//   console.log(error);
+// }
+
+// -----------------------------------------------------------------------------
+// пример ПОКЕМОН
+// -----------------------------------------------------------------------------
+
+fetch("https://pokeapi.co/api/v2/ability/2")
+  .then((response) => {
+    return response.json();
+  })
+  .then((pokemon) => {
+    console.log(pokemon);
   });
-};
-
-makeOrder("пирожок").then(onSuccess).catch(onError);
-
-function onSuccess(result) {
-  console.log(result);
-}
-
-function onError(error) {
-  console.log(error);
-}
