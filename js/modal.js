@@ -1196,4 +1196,7 @@ fetch("https://pokeapi.co/api/v2/ability/2")
   })
   .then((pokemon) => {
     console.log(pokemon);
+  })
+  .catch((error) => {
+    console.log(error);
   });
