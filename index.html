@@ -24,10 +24,18 @@
   <body>
     <ul id="menu" class="menu">
       <li class="menu-item">Имя: {{name}}</li>
-      <!-- <li class="menu-item">about</li>
-      <li class="menu-item">gallery</li>
-      <li>blog</li> -->
+      <li class="menu-item">Вес: {{weight}}</li>
+      <li class="menu-item">Рост: {{height}}</li>
     </ul>
+    <div>
+      <p>Умения</p>
+      {{#each abilities}}
+      <ul>
+        <li>{{ability.name}}</li>
+      </ul>
+
+      {{/each}}
+    </div>
 
     <script src="./js/modal.js" type="module"></script>
   </body>
